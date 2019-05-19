@@ -11,17 +11,19 @@
       <a class="header__logo">
         <img src="img/logo.svg" alt="Логотип" width="220" height="47">
       </a>
-      <!--<div class="header__search">
-        <a href="#">
+      <div class="header__search">
+        <form class="header__search-form" action="https://htmlacademy.ru" method="post" name="search">
+          <a href="#">
             <img src="img/icon-search.svg" alt="поиск">
-        </a>
-        <form>
-        Форма поиска 
-        </form>
-      </div>-->
+          </a> <!-- Картинка будет кнопкой или ссылкой отправки?--> 
+               <!--<button type="submit" name="search-button"><img src="img/icon-search.svg" alt="поиск"></button>-->
+          <label for="search">Поиск:</label>
+          <input id="search" type="text" name="search" value="" placeholder="">
+        </form> 
         <a href="#">Закладки: 0</a>
-        <a href="#">Корзина: 10</a>
-      <a class="header__checkout" href="#">Оформить заказ</a>
+        <a href="#">Корзина: 0</a>
+        <a class="header__checkout" href="#">Оформить заказ</a>
+      </div>
     </div>
     <div class="header-main">
       <h1>Интернет-магазин строительных материалов и инструментов для ремонта</h1>
@@ -85,13 +87,12 @@
       <form action="#" method="GET">
         <fieldset>
           <legend>Цена:</legend>
-
         </fieldset>
         <fieldset>
           <legend>Производители:</legend>
           <ul>
             <li>
-              <input id="bosch" type="checkbox" name="Bosch">
+              <input id="bosch" type="checkbox" name="Bosch" checked>
               <label for="bosch">Bosch</label>
             </li>
             <li>
@@ -99,7 +100,7 @@
               <label for="inter">Интерскол</label>
             </li>
             <li>
-              <input id="makita" type="checkbox" name="Makita">
+              <input id="makita" type="checkbox" name="Makita" checked>
               <label for="makita">Makita</label>
             </li>
             <li>
@@ -116,7 +117,7 @@
           <legend>Питание:</legend>
           <ul>
             <li>
-              <input id="battery"  type="radio" name="battery">
+              <input id="battery"  type="radio" name="battery" checked>
               <label for="battery">Аккумуляторные:</label>
             </li>
             <li>
@@ -125,7 +126,7 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">Показать</button>
+        <button type="submit" name="submit">Показать</button>
       </form>
     </section>
     <!--Сортировка-->
@@ -338,7 +339,14 @@
       <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </div>
   </footer>
-  <!--Модальные окна-->
+  <div class="info-basket">
+    <button type="button"><img src="icon-close.svg" width="21" height="21" alt="exit"></button><!--вроде можно вне форм использовать?-->
+    <p>Товар добавлен в корзину!</p>
+    <form class="info-basket__form" action="https://htmlacademy.ru" method="post">
+      <button class="info-basket__form_button button-checkout" type="submit">Оформить заказ</button>
+      <button class="info-basket__form_button button-continue" type="button">Продолжить покупки</button>
+    </form>
+  </div>
   <!--Сюда скрипты подключать-->
 </body>
 </html>
