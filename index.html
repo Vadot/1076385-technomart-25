@@ -13,13 +13,9 @@
         <img src="img/logo.svg" alt="Логотип" width="220" height="47">
       </a>
       <div class="header__search">
-        <form class="header__search-form" action="https://htmlacademy.ru" method="post" name="search">
-          <a href="#">
-            <img src="img/icon-search.svg" alt="поиск">
-          </a> <!-- Картинка будет кнопкой или ссылкой отправки?--> 
-               <!--<button type="submit" name="search-button"><img src="img/icon-search.svg" alt="поиск"></button>-->
-          <label for="search">Поиск:</label>
-          <input id="search" type="text" name="search" value="" placeholder="">
+        <form class="header__search-form" action="https://htmlacademy.ru" method="get" name="search">
+          <button type="submit" name="search-button"><img src="img/icon-search.svg" alt="Поиск"></button>
+          <input type="search" name="search" placeholder="Поиск:">
         </form> 
         <a href="#">Закладки: 0</a>
         <a href="#">Корзина: 0</a>
@@ -46,7 +42,7 @@
           <a class="main-nav__link" href="#">Компания</a>
         </li>
         <li class="main-nav__item">
-          <a class="main-nav__link" href="#">Каталог</a>
+          <a class="main-nav__link" href="catalog.html">Каталог</a>
         </li>
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Новости</a>
@@ -90,7 +86,7 @@
         <p>Вы можете забрать товар сами, заехав в наш офис</p>
         <a href="#">
           <!--Ссылка на большую карту-->
-          <img src="img/map.jpg" alt="Карта" width="300" height="158">
+          <img src="img/map.jpg" alt="г.Санкт-Петербург, ул.Большая конюшенная, д.19/8" width="300" height="158">
         </a>
         <a class="output__btn" href="#">Заблудились? Напишите нам!</a>
       </section>
@@ -148,15 +144,15 @@
     </div>
   </footer>
   <div class="write-us">
-    <form action="https://htmlacademy.ru" method="post"  name="write-us" class="write-us__form"><!--Здесь метод тоже пост? -->
-      <button type="button"><img src="icon-close.svg" width="21" height="21" alt="exit"></button>
+    <form action="https://htmlacademy.ru" method="post"  name="write-us" class="write-us__form">
+      <button type="button" aria-label="Exit"></button>
       <label for="log-name">Ваше имя:</label>
-      <input type="text" name="name" id="log-name" value="" placeholder="Имя Фамилия"> <!--Думаю, классы не нужны?-->
+      <input type="text" name="name" id="log-name" placeholder="Имя Фамилия">
       <label for="e-mail">Ваш e-mail:</label>
-      <input type="text" name="e-mail" id="e-mail" value="" placeholder="email@example.com">
+      <input type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
       <label for="textarea">Текст письма:</label>
-      <input type="textarea" name="letter" id="textarea" value="" placeholder="В свободной форме">
-      <button type="submit" name="submit">Отправить</button>
+      <input type="textarea" name="letter" id="textarea" placeholder="В свободной форме">
+      <button type="submit">Отправить</button>
     </form> 
   </div>
   <!--Сюда скрипты подключать-->
