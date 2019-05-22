@@ -2,6 +2,9 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -29,16 +32,16 @@
       <p class="header-main__address">
         г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
-      <a href="#">
+      <a class="header__id"href="#">
         Равшан Джамшутович
       </a>
       <a href="#">
-        <img src="img/icon-login" alt="exit">
+        <img src="img/icon-login.svg" alt="exit">
       </a>
-      <a href="#">
+      <a class="underline" href="#">
         Мои заказы
       </a>
-      <a href="#">
+      <a class="underline" href="#">
         Личный кабинет
       </a>
     </div>
@@ -77,10 +80,10 @@
       <li><a href="#">Инструменты</a></li>
       <li>Перфораторы</li>
     </ul>
-    <h2>Перфораторы</h2>
+    <div class="back"><h2>Перфораторы</h2></div>
     <section class="filter">
-      <!--Фильтр-->
       <form action="https://htmlacademy.ru" method="get">
+        <!--Фильтр-->
         <fieldset>
           <legend>Цена:</legend>
         </fieldset>
@@ -127,7 +130,8 @@
     </section>
     <!--Сортировка-->
     <section class="catalog">
-      <h2 class="visually-hidden">Каталог товаров</h2>
+    <h2 class="visually-hidden">Каталог товаров</h2>
+      <ul>
 
         <li class="catalog__item">
           <div class="catalog__mouse">
@@ -295,7 +299,7 @@
         <a href="#">Новости</a>
       </li>
       <li class="footer__item">
-        <a href="#">Каталог</a>
+        <a href="catalog.html">Каталог</a>
       </li>
       <li class="footer__item">
         <a href="#">Доставка</a>
@@ -304,7 +308,7 @@
         <a href="#">Контакты</a>
       </li>
     </ul>
-    <p class="footer__text">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+    <p class="footer__text">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p><br>
     <a href="tel:+78125550555">+7 (812) 555-05-55</a>
     <ul class="special-nav">
       <li class="special-nav__item">
@@ -328,10 +332,10 @@
         <li class="footer__social-btn"><a href="#"><img src="img/icon-fb.svg" alt="Фейсбук"></a></li>
         <li class="footer__social-btn"><a href="#"><img src="img/icon-insta.svg" alt="Инстаграм"></a></li>
       </ul>
-      <p>Обратная связь:</p>
-      <p class="footer__email"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-      <p>Разработано:</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+      <p>Обратная связь:</p><br>
+      <a class="footer__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <p>Разработано:</p><br>
+      <a class="footer__web" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </div>
   </footer>
   <div class="info-basket">

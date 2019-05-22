@@ -3,6 +3,9 @@
 
 <head>
   <meta charset="utf-8">
+  <link rel="stylesheet" href="normalize.css">
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -30,7 +33,7 @@
       <p class="header-main__address">
         г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </p>
-      <a class="header-main__user-link_pic" href="login.html">Войти</a>
+      <a class="header-main__user-link header-main__user-link_pic" href="login.html">Войти</a>
       <a class="header-main__user-link" href="login.html">Регистрация</a>
     </div>
     <nav class="main-nav">
@@ -113,7 +116,7 @@
         <a href="#">Контакты</a>
       </li>
     </ul>
-    <p class="footer__text">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+    <p class="footer__text">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p><br>
     <a href="tel:+78125550555">+7 (812) 555-05-55</a>
     <ul class="special-nav">
       <li class="special-nav__item">
@@ -137,10 +140,10 @@
         <li class="footer__social-btn"><a href="#"><img src="img/icon-fb.svg" alt="Фейсбук"></a></li>
         <li class="footer__social-btn"><a href="#"><img src="img/icon-insta.svg" alt="Инстаграм"></a></li>
       </ul>
-      <p>Обратная связь:</p>
-      <p class="footer__email"><a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-      <p>Разработано:</p>
-      <a href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
+      <p>Обратная связь:</p><br>
+      <a class="footer__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      <p>Разработано:</p><br>
+      <a class="footer__web" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
     </div>
   </footer>
   <div class="write-us">
@@ -152,7 +155,9 @@
       <input type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
       <label for="textarea">Текст письма:</label>
       <input type="textarea" name="letter" id="textarea" placeholder="В свободной форме">
-      <button type="submit">Отправить</button>
+      <div class="write-us__bottom"
+        <button type="submit">Отправить</button>
+      </div>
     </form> 
   </div>
   <!--Сюда скрипты подключать-->
