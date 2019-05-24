@@ -1,13 +1,76 @@
+@font-face {
+    font-family: "Cuprum";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/cuprum.woff2") format("woff2"),
+         url("../fonts/cuprum.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/cuprumbold.woff2") format("woff2"),
+         url("../fonts/cuprumbold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum";
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+    src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+         url("../fonts/cuprumitalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Cuprum";
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+    src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+         url("../fonts/cuprumbolditalic.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/ptsans.woff2") format("woff2"),
+         url("../fonts/ptsans.woff") format("woff");
+}
+
+@font-face {
+    font-family: "PT Sans";
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    src: url("../fonts/ptsansbold.woff2") format("woff2"),
+         url("../fonts/ptsansbold.woff") format("woff");
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
 body {
 	margin: 0;
 	padding: 0;
 
-	font-family: 'PT Sans', Arial, sans-serif;
+	font-family: "PT Sans", "Arial", sans-serif;
 	font-weight: 400;
 	font-size: 13px;
-	font-weight: 400;
 	line-height: 24px;
-	letter-spacing: 0;
+	color: #000000;
 
 	background-color: #ffffff;
 }
@@ -24,38 +87,78 @@ a {
 	margin: -1px;
 }
 
-header.header {
-	background-color: #F3F7F8;
-	background-image: url("img/Bitmap.png");
-	background-position: top center;
-	background-repeat: repeat;
-
-	text-align: center;
-	letter-spacing: 0;
-	vertical-align: middle;
-    font-size: 17px;
-    color: #FFFFFF;
-    line-height: 18px;
+.header {
+	background-color: #f4f7f9;
 }
 
-
-
-.header-top {
+.header__top {
 	background-color: #293449;
-	width: 1280px;
-	height: 42px;
 }
-.header__chekout {
-	background: #63A63E;
+
+.header__logo-block {
+	width: 220px;
+	height: 47px;
+	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+	background-color: #ee3643;
+}
+
+.header__logo-block:hover,
+.header__logo-block:focus {
+	background-color: #ca2c37;
+}
+
+.header__logo-block:active {
+	background-color: #ba2732;
+}
+
+.header__logo {
+	display: flex;
+	justify-content: center;
+	padding-top: 13px;
+	padding-bottom: 15px;
+}
+
+.header__search {
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 17px;
-	color: #FFFFFF;
-	line-height: 18px;
+	line-height: 1.06;
+	color: #ffffff;
 }
 
+.header__search--chekout {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 1.06;
+	color: #ffffff;
+}
 
-.header-main h1{
-	font-family: 'PT Sans', Arial, sans-serif;
+.header__search:hover,
+.header__search:focus {
+	background-color: #212a3a;
+}
+
+.header__basket-link:active {
+	background-color: #161d29;
+}
+
+.header__make-order {
+  	width: 150px;
+  	height: 42px;
+  	background-color: #63a63e;
+  	color: #ffffff;
+
+  	display: flex;
+  	justify-content: center;
+  	align-items: center;
+
+}
+
+.header__title{
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 16px;
+	font-style: italic;
+	font-weight: 400;
+	line-height: 23px;
 	color: #EE3643;
 	text-align: left;
 }
@@ -66,65 +169,58 @@ header.header {
 
 	font-size: 21px;
 	color: #EE3643;
-	text-align: center;
 }
-.header__top a {
-	font-size: 17px;
-	color: #FFFFFF;
-	letter-spacing: 0;
-	line-height: 18px;
-}
+
 
 .header-main__address {
     font-size: 14px;
 	color: #32425C;
-	text-align: center;
 	line-height: 24px;
 }
 
 .header-main__user-link {
 	font-size: 21px;
 	color: #000000;
-	letter-spacing: 0;
 	line-height: 21px;
 
 	background-color: #ffffff;
+	padding: 25px;
+	padding-top: 14px;
+	padding-bottom: 11px;
 }
 
-.header-main__user-link:hover,
-.header-main__user-link:focus {
-	font-size: 21px;
-	color: #EE3643;
-	line-height: 21px;
+.header-main__user-link--pic { /*как выровнять по центру?*/
+	padding-right: 27px;
+	padding-top: 14px;
+	padding-left: 48px;
+
+	position: relative;
 }
 
-.header-main__user-link:active {
-	opacity: 0.3;
-	font-family: Helvetica;
-	font-size: 21px;
-	color: #000000;
-	line-height: 21px;
+.header-main__user-link--pic::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 17px;
+	left: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	background-image: url("../img/icon-login.svg");
+	background-repeat: no-repeat;
 }
 
-.header-main__user-link_pic {
-	background-color: #ffffff;
-	background-image: url("/icon-login.css");
-	background-repeat: none;
-}
 
-nav.main-nav {
+.main-nav {
 	background: #32425C;
     box-shadow: inset 0 -5px 0 0 #293449;
     width: 940px;
-    height: 60px;
-}
 
-nav.main-nav a {
-	font-size: 17px;
-	color: #FFFFFF;
-	letter-spacing: 0;
+    text-align: center;	
+    font-size: 17px;
 	line-height: 17px;
 }
+
 
 .main-nav__list {
 	list-style: none;
@@ -136,41 +232,29 @@ nav.main-nav a {
 	line-height: 17px;
 }
 
-.main-nav__item:hover,
-.main-nav__item:focus {
-	background-color: #293449;
-}
-
-.main-nav__item:active {
-	background-color: #293449;
-	opacity: 0.5;
-	font-size: 17px;
+.main-nav__link {
 	color: #FFFFFF;
-	letter-spacing: 0;
-	line-height: 17px;
+
 }
 
 .output {
 	color: #000000;
-	letter-spacing: 0;
-	font-weight: 400;
-}
-
-.output h2 {
-	font-size: 30px;
-	line-height: 30px;
-}
-
-.output p {
 	font-size: 13px;
 	line-height: 24px;
 }
 
-.output ul.output__agent {
+.output__title {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 30px;
+	line-height: 30px;
+}
+
+
+.output__agent {
 	font-size: 18px;
 	line-height: 19px;
 
-	list-style: ???;
+	list-style: none;
 }
 
 .output__btn {
@@ -183,28 +267,36 @@ nav.main-nav a {
 	border: 1px solid #979797;
 }
 
-/*Карту большую надо делать? И как?*/
+.header__logo-bottom { /*надо подровнять*/
+	width: 220px;
+	height: 68px;
+	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
+	background-color: #ee3643;
+	display: flex;
+	justify-content: center;
+}
 
- footer.footer {
-	background-color: #32425;
+
+.footer {
+	background-color: #32425c;
+	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 18px;
 	color: #F3F7F9;
 	line-height: 24px;
-	letter-spacing: 0;
-	font-weight: 400;
 }
 
-.footer__nav {
-	color: #F1F5F7;
+
+.footer__item {
+	color: #f1f5f7;
+}
+
+.footer__nav,
+.special-nav {
 	list-style: none;
 }
 
-footer .special-nav {
-	font-size: 18px;
+.special-nav__item {
 	color: #FFD180;
-	line-height: 24px;
-
-	list-style: none;
 }
 
 .footer__bottom {
@@ -216,21 +308,39 @@ footer .special-nav {
 	background-color: #293449;
 }
 
-a.footer__email,
-a.footer__web {
+.footer__tel {
+	color: #f3f7f9;
+}
+
+.footer__email,
+.footer__web {
 	color: #FFD180;Í
 }
 
+.footer__social-link {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 42px;
+	height: 42px;
+	border-radius: 50%;
+	background-color: #212A3A;
+} 
+
+
 .footer__social-btn {
-	background: #212A3A; /*Не могу найти значение для скругления*/
+	list-style: none; 
+}
+
+.footer__rights {
+	line-height: 18px;
 }
 
 .write-us {
-	background: rgba(0,0,0,0.00);
 	box-shadow: 0 20px 40px 0 rgba(0,0,0,0.75);
 	font-size: 18px;
 	color: #000000;
-	letter-spacing: 0;
 	line-height: 18px;
 }
 
@@ -238,7 +348,7 @@ a.footer__web {
 	background-color: #f4f4f4;
 }
 
-a.header__id {
+.header__id {
 	font-size: 21px;
 	color: #000000;
 	line-height: 21px;
@@ -248,30 +358,26 @@ a.header__id {
 .header-id:focus {
 	font-size: 16px;
 	color: #EE3643;
-	letter-spacing: 0;
 }
 
 .header-id:active {
 	opacity: 0.3;
 	font-size: 21px;
-	color: #000000;
-	letter-spacing: 0;
 	line-height: 21px;
 }
 
-ul.breadcrumbs {
+.breadcrumbs {
 	font-size: 13px;
-	color: #000000;
 	line-height: 18px;
 }
 
-div.back h2 {
+.back__title {
 	font-size: 30px;
 	color: #32425C;
 	line-height: 30px;
 }
 
-.filter legend {
+.filter__legend {
 	font-size: 17px;
 	font-weight: 700;
 	color: #000000;
@@ -296,7 +402,7 @@ div.back h2 {
 	line-height: 18px;
 }
 
-section.catalog ul {
+.catalog ul {
 	list-style: none;
 	background: #FFFFFF;
     border: 1px solid #E5E5E5;
@@ -308,15 +414,14 @@ section.catalog ul {
 	box-shadow: 0 10px 25px 0 rgba(41,52,73,0.50);
 }
 
-section.catalog h3 {
+.catalog h3 {
 	font-weight: 700;
 	font-size: 18px;
-	color: #000000;
 	text-align: center;
 	line-height: 20px;
 }
 
-section.catalog span {
+.catalog span {
 	font-size: 17px;
 	color: #999999;
 	text-align: center;
@@ -324,10 +429,11 @@ section.catalog span {
 	text-decoration: line-through;
 }
 
-section.catalog .catalog__price {
+.catalog__price {
 	font-weight: 700;
 	font-size: 17px;
 	color: #FFFFFF;
+	background-color: red;
 	text-align: center;
 	line-height: 18px;
 
@@ -335,10 +441,9 @@ section.catalog .catalog__price {
 }
 
 
-a.catalog__buy {
+.catalog__buy {
 	font-size: 14px;
 	color: #FFFFFF;
-	letter-spacing: 0;
 	text-align: center;
 	line-height: 18px;
 
@@ -347,66 +452,20 @@ a.catalog__buy {
 	border-radius: 2px;
 }
 
-a.catalog__buy:hover,
-a.catalog__buy:focus {
-	background: #5FBB2D;
-	box-shadow: inset 0 -3px 0 0 #367315;
-	border-radius: 2px;
 
-	font-size: 14px;
-	color: #FFFFFF;
-	text-align: center;
-	line-height: 18px;
-}
-
-a.catalog__buy:active {
-	background: #518534;
-	border-radius: 2px;
-}
-
-a.catalog__marks {
+.catalog__marks {
 	font-size: 14px;
 	color: #32425C;
 	text-align: center;
 	line-height: 18px;
-
-	/*border*/
+ 	width: 135px;
+	height: 38px;
+  	border: solid 3px #63a63e;
 }
 
-a.underline {
+.underline {
 	text-decoration: underline;
 	font-size: 16px;
 	color: #32425C;
 	line-height: 18px;
-}
-
-a.underline:hover,
-a.underline:focus {
-	font-size: 16px;
-	color: #EE3643;
-}
-
-a.underline:active {
-	opacity: 0.3;
-	font-size: 16px;
-	color: #32425C;
-}
-
-.special-nav:hover,
-.special-nav:focus,
-.footer-nav:hover,
-.footer-nav:focus {
-	text-decoration: underline;
-}
-
-.special-nav:active,
-.footer-nav:active {
-	opacity: 0.5;
-}
-
-.footer-email:hover,
-.footer-email:focus,
-.footer-web:hover,
-.footer-web:focus {
-	color: #EE3643;
 }
