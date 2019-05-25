@@ -11,21 +11,19 @@
 <body>
   <header class="header">
     <div class="header__top">
-      <div class="header__logo-block">
-        <a class="header__logo" href="index.html">
+        <a class="lodo header__logo" href="index.html">
           <img src="img/logo.svg" alt="Логотип" width="109" height="19">
         </a>
-      </div>
       <div class="header__search">
         <form class="header__search-form" action="https://htmlacademy.ru" method="get" name="search">
           <button class="header__search-button" type="submit" name="search-button"><img src="img/icon-search.svg" alt="Поиск"></button>
           <input type="search" name="search" placeholder="Поиск:">
-        </form> 
-        <a class="header__basket-link header__search" href="#">Закладки: 0</a>
-        <a class="header__basket-link header__search" href="#">Корзина: 0</a>
-        <div class="header__make-order">
-          <a class="header__search--chekout" href="#">Оформить заказ</a>
-        </div>
+        </form>
+      </div>
+      <a class="header__basket-link header__search" href="#">Закладки: 0</a>
+      <a class="header__basket-link header__search" href="#">Корзина: 0</a>
+      <div class="header__make-order">
+        <a class="header__search--chekout" href="#">Оформить заказ</a>
       </div>
     </div>
     <div class="header-main">
@@ -40,7 +38,7 @@
         Равшан Джамшутович
       </a>
       <a href="#">
-        <img src="img/icon-login.svg" alt="exit">
+        <img src="img/icon-login.svg" alt="exit" aria-label="Выйти">
       </a>
       <a class="underline" href="#">
         Мои заказы
@@ -77,14 +75,14 @@
   </header>
 
 
-  <main>
+  <main class="main-page">
     <ul class="breadcrumbs">
       <li><a href="index.html"><img src="img/icon-home.svg" alt="Главная" height="12" width="14"></a></li>
       <li><a href="#">Каталог</a></li>
       <li><a href="#">Инструменты</a></li>
       <li>Перфораторы</li>
     </ul>
-    <div class="back"><h2 class="title">Перфораторы</h2></div>
+    <h2 class="main-page__title">Перфораторы</h2>
     <section class="filter">
       <form action="https://htmlacademy.ru" method="get">
         <!--Фильтр-->
@@ -292,11 +290,9 @@
   </main>
 
     <footer class="footer">
-    <div class="header__logo-bottom">
-      <a class="header__logo" href="index.html">
+      <a class="logo header__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип" height="23" width="138">
       </a>
-    </div>
     <ul class="footer__nav">
       <li class="footer__item">
         <a class="footer__item" href="#">Компания</a>

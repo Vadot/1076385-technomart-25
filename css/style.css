@@ -81,10 +81,13 @@ a {
 
 .visually-hidden {
 	position: absolute;
-	clip: rect(0 0 0 0);
-	width: 1px;
+  	width: 1px;
 	height: 1px;
 	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }
 
 .header {
@@ -95,25 +98,26 @@ a {
 	background-color: #293449;
 }
 
-.header__logo-block {
+.logo {
 	width: 220px;
 	height: 47px;
 	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 	background-color: #ee3643;
+
+	display: flex;
+	justify-content: center;
 }
 
-.header__logo-block:hover,
-.header__logo-block:focus {
+.logo:hover,
+.logo:focus {
 	background-color: #ca2c37;
 }
 
-.header__logo-block:active {
+.logo:active {
 	background-color: #ba2732;
 }
 
 .header__logo {
-	display: flex;
-	justify-content: center;
 	padding-top: 13px;
 	padding-bottom: 15px;
 }
@@ -126,10 +130,10 @@ a {
 }
 
 .header__search--chekout {
-	font-family: "Cuprum", "Arial", sans-serif;
-	font-size: 17px;
-	line-height: 1.06;
-	color: #ffffff;
+	background-color: #63a63e;
+	padding: 14px;
+	padding-left: 20px;
+	padding-right: 22px;
 }
 
 .header__search:hover,
@@ -137,7 +141,26 @@ a {
 	background-color: #212a3a;
 }
 
-.header__basket-link:active {
+.header__search--chekout:hover,
+.header__search--chekout:focus {
+	background-color: #5fbb2d;
+}
+
+.header__search--chekout:active {
+	background-color: #518534;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+
+.header__link,
+.header__search-form {
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-size: 17px;
+	line-height: 1.06;
+	color: #ffffff;
+}
+
+.header__link:active {
 	background-color: #161d29;
 }
 
@@ -257,7 +280,7 @@ a {
 	list-style: none;
 }
 
-.output__btn {
+.button {
 	font-size: 14px;
 	color: #FFFFFF;
 	text-align: center;
@@ -267,13 +290,12 @@ a {
 	border: 1px solid #979797;
 }
 
-.header__logo-bottom { /*надо подровнять*/
+.footer__logo{ 
 	width: 220px;
 	height: 68px;
-	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
-	background-color: #ee3643;
-	display: flex;
-	justify-content: center;
+
+	padding-top: 20px;
+
 }
 
 
@@ -371,7 +393,7 @@ a {
 	line-height: 18px;
 }
 
-.back__title {
+.main-page__title {
 	font-size: 30px;
 	color: #32425C;
 	line-height: 30px;

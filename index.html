@@ -11,21 +11,19 @@
 <body>
   <header class="header">
     <div class="header__top">
-      <div class="header__logo-block">
-        <a class="header__logo" href="index.html">
+        <a class="logo header__logo" href="index.html">
           <img src="img/logo.svg" alt="Логотип" width="109" height="19">
         </a>
-      </div>
       <div class="header__search">
-        <form class="header__search-form" action="https://htmlacademy.ru" method="get" name="search">
-          <button class="header__search-button" type="submit" name="search-button"><img src="img/icon-search.svg" alt="Поиск"></button>
-          <input type="search" name="search" placeholder="Поиск:">
-        </form> 
-        <a class="header__basket-link header__search" href="#">Закладки: 0</a>
-        <a class="header__basket-link header__search" href="#">Корзина: 0</a>
-        <div class="header__make-order">
-          <a class="header__search--chekout" href="#">Оформить заказ</a>
+        <div class="header__search-form">
+          <form  action="https://htmlacademy.ru" method="get" name="search">
+            <button class="header__search-button" type="submit" name="search-button"><img src="img/icon-search.svg" alt="Поиск"></button>
+            <input type="search" name="search" placeholder="Поиск:">
+          </form> 
         </div>
+        <a class="header__link header__search" href="#">Закладки: 0</a>
+        <a class="header__link header__search" href="#">Корзина: 0</a>
+        <a class="header__search header__search--chekout" href="#">Оформить заказ</a>
       </div>
     </div>
     <div class="header-main">
@@ -85,7 +83,7 @@
             ЖелДорЭкспедиция
           </li>
         </ul>
-        <a class="output__btn" href="#">Подробнее о компании</a>
+        <a class="button" href="#">Подробнее о компании</a>
       </section>
       <section class="output__contacts">
         <h2>Контакты</h2>
@@ -94,16 +92,14 @@
           <!--Ссылка на большую карту-->
           <img src="img/map.jpg" alt="г.Санкт-Петербург, ул.Большая конюшенная, д.19/8" width="300" height="158">
         </a>
-        <a class="output__btn" href="#">Заблудились? Напишите нам!</a>
+        <a class="button" href="#">Заблудились? Напишите нам!</a>
       </section>
     </div>
   </main>
   <footer class="footer">
-    <div class="header__logo-bottom">
-      <a class="header__logo" href="index.html">
+      <a class="logo footer__logo" href="index.html">
         <img src="img/logo.svg" alt="Логотип" height="23" width="138">
       </a>
-    </div>
     <ul class="footer__nav">
       <li class="footer__item">
         <a class="footer__item" href="#">Компания</a>
@@ -138,16 +134,16 @@
       </li>
     </ul>
     <div class="footer__bottom">
-      <p class="footer__rights">&copy;2010-2019 Компания «Техномарт» <br>
+      <p class="footer__rights">&copy;2010-2019 Компания «Техномарт»
       Все права защищены</p>
       <ul>
         <li class="footer__social-btn"><a class="footer__social-link" href="#"><img src="img/icon-vk.svg" alt="Вконтакте"></a></li>
         <li class="footer__social-btn"><a class="footer__social-link" href="#"><img src="img/icon-fb.svg" alt="Фейсбук"></a></li>
         <li class="footer__social-btn"><a class="footer__social-link" href="#"><img src="img/icon-insta.svg" alt="Инстаграм"></a></li>
       </ul>
-      <p>Обратная связь:<br>
+      <p>Обратная связь:
       <a class="footer__email" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-      <p>Разработано:<br>
+      <p>Разработано:
       <a class="footer__web" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
     </div>
   </footer>
