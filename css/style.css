@@ -122,35 +122,6 @@ a {
 	padding-bottom: 15px;
 }
 
-.header__search {
-	font-family: "Cuprum", "Arial", sans-serif;
-	font-size: 17px;
-	line-height: 1.06;
-	color: #ffffff;
-}
-
-.header__search--chekout {
-	background-color: #63a63e;
-	padding: 14px;
-	padding-left: 20px;
-	padding-right: 22px;
-}
-
-.header__search:hover,
-.header__search:focus {
-	background-color: #212a3a;
-}
-
-.header__search--chekout:hover,
-.header__search--chekout:focus {
-	background-color: #5fbb2d;
-}
-
-.header__search--chekout:active {
-	background-color: #518534;
-	color: rgba(255, 255, 255, 0.5);
-}
-
 
 .header__link,
 .header__search-form {
@@ -158,10 +129,31 @@ a {
 	font-size: 17px;
 	line-height: 1.06;
 	color: #ffffff;
+
+	display: inline-block;
+	vertical-align: center;
 }
 
-.header__link:active {
-	background-color: #161d29;
+.header__link--chekout {
+	background-color: #63a63e;
+	padding: 14px;
+	padding-left: 20px;
+	padding-right: 22px;
+}
+
+.header__link:hover,
+.header__link:focus {
+	background-color: #212a3a;
+}
+
+.header__link--chekout:hover,
+.header__link--chekout:focus {
+	background-color: #5fbb2d;
+}
+
+.header__link--chekout:active {
+	background-color: #518534;
+	color: rgba(255, 255, 255, 0.5);
 }
 
 .header__make-order {
@@ -220,7 +212,7 @@ a {
 	position: relative;
 }
 
-.header-main__user-link--pic::before {
+.header-main__user-link--pic::before { /*как выровнять по центру?*/
 	content: "";
 	position: absolute;
 	width: 20px;
@@ -239,25 +231,19 @@ a {
     box-shadow: inset 0 -5px 0 0 #293449;
     width: 940px;
 
-    text-align: center;	
-    font-size: 17px;
-	line-height: 17px;
+    text-align: center;
+    font-family: "Cuprum", "Arial", sans-serif;
 }
-
 
 .main-nav__list {
 	list-style: none;
 }
 
-.main-nav__item {
-	font-size: 17px;
-	color: #FFFFFF;
-	line-height: 17px;
-}
 
 .main-nav__link {
 	color: #FFFFFF;
-
+	font-size: 17px;
+	line-height: 17px;
 }
 
 .output {
@@ -270,6 +256,9 @@ a {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 30px;
 	line-height: 30px;
+	text-transform: uppercase;
+	color: #000000;
+
 }
 
 
@@ -282,12 +271,27 @@ a {
 
 .button {
 	font-size: 14px;
-	color: #FFFFFF;
 	text-align: center;
 	line-height: 18px;
+	font-family: "Cuprum", "Arial", sans-serif;
+	font-weight: 400;
+	color: #ffffff;
+	text-transform: uppercase;
 
-	background: #EE3643;
-	border: 1px solid #979797;
+	background-color: #ee3643;
+	border-radius: 2px;
+	padding-top: 14px;
+	padding-bottom: 12px;
+}
+
+.button__detail {
+	padding-left: 41px;
+	padding-right: 40px;
+}
+
+.button__write {
+	padding-left: 63px;
+	padding-right: 59px;
 }
 
 .footer__logo{ 
@@ -394,6 +398,8 @@ a {
 }
 
 .main-page__title {
+	background-color: #f2f6f8;
+
 	font-size: 30px;
 	color: #32425C;
 	line-height: 30px;
@@ -490,4 +496,10 @@ a {
 	font-size: 16px;
 	color: #32425C;
 	line-height: 18px;
+}
+
+.footer__social-list {
+	list-style: none;
+	padding: 0;
+	margin: 0;
 }
