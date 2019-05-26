@@ -99,13 +99,17 @@ a {
 }
 
 .logo {
-	width: 220px;
-	height: 47px;
 	box-shadow: inset 0px -5px 0 0 rgba(0, 0, 0, 0.24);
 	background-color: #ee3643;
+	align-items: center;
 
 	display: flex;
 	justify-content: center;
+}
+
+.header__logo {
+	width: 220px;
+	height: 47px;
 }
 
 .logo:hover,
@@ -116,12 +120,6 @@ a {
 .logo:active {
 	background-color: #ba2732;
 }
-
-.header__logo {
-	padding-top: 13px;
-	padding-bottom: 15px;
-}
-
 
 .header__link,
 .header__search-form {
@@ -186,7 +184,6 @@ a {
 	color: #EE3643;
 }
 
-
 .header-main__address {
     font-size: 14px;
 	color: #32425C;
@@ -202,6 +199,15 @@ a {
 	padding: 25px;
 	padding-top: 14px;
 	padding-bottom: 11px;
+}
+
+.header-main__user-link:hover,
+.header-main__user-link:focus {
+	color: #ee3643;
+}
+
+.header-main__user-link:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 
 .header-main__user-link--pic { /*как выровнять по центру?*/
@@ -225,13 +231,10 @@ a {
 	background-repeat: no-repeat;
 }
 
-
 .main-nav {
 	background: #32425C;
     box-shadow: inset 0 -5px 0 0 #293449;
-    width: 940px;
 
-    text-align: center;
     font-family: "Cuprum", "Arial", sans-serif;
 }
 
@@ -239,11 +242,21 @@ a {
 	list-style: none;
 }
 
-
 .main-nav__link {
 	color: #FFFFFF;
 	font-size: 17px;
 	line-height: 17px;
+}
+
+.main-nav__item:hover,
+.main-nav__item:focus {
+	background-color: #293449;
+}
+
+.main-nav__item:active { /*остается полоска при клике (из-за прозрачности, но без нее не работате цвет шрифта)*/
+	background-color: #1d2739;
+	color: rgba(255, 255, 255, 0.5);
+	opacity: 0.5;
 }
 
 .output {
@@ -260,7 +273,6 @@ a {
 	color: #000000;
 
 }
-
 
 .output__agent {
 	font-size: 18px;
@@ -297,11 +309,7 @@ a {
 .footer__logo{ 
 	width: 220px;
 	height: 68px;
-
-	padding-top: 20px;
-
 }
-
 
 .footer {
 	background-color: #32425c;
@@ -311,9 +319,22 @@ a {
 	line-height: 24px;
 }
 
-
 .footer__item {
 	color: #f1f5f7;
+}
+
+
+.special-nav__item:hover,
+.special-nav__item:focus,
+.footer__item:hover,
+.footer__item:focus {
+	text-decoration: underline;
+}
+
+.special-nav__item:active,
+.footer__item:active {
+	color: rgba(241, 245, 247, 0.5);
+	text-decoration: none;
 }
 
 .footer__nav,
@@ -328,7 +349,6 @@ a {
 .footer__bottom {
 	font-size: 16px;
 	color: #FFFFFF;
-	letter-spacing: 0;
 	line-height: 18px;
 
 	background-color: #293449;
@@ -338,9 +358,22 @@ a {
 	color: #f3f7f9;
 }
 
-.footer__email,
-.footer__web {
-	color: #FFD180;Í
+.footer__feedback {
+	color: #FFD180;
+}
+
+.footer__feedback:hover,
+.footer__feedback:focus {
+	text-decoration: underline;
+}
+
+.footer__feedback:focus {
+	text-decoration: none;
+	color: #ee3643;
+}
+
+.footer__social-network {
+	list-style: none;
 }
 
 .footer__social-link {
@@ -354,10 +387,15 @@ a {
 	background-color: #212A3A;
 } 
 
-
 .footer__social-btn {
-	list-style: none; 
+	padding: 0;
+	margin: 0; 
 }
+
+.footer__social-link:hover,
+.footer__social-link:focus {
+	background-color: #ee3643;
+} 
 
 .footer__rights {
 	line-height: 18px;
@@ -395,6 +433,13 @@ a {
 .breadcrumbs {
 	font-size: 13px;
 	line-height: 18px;
+	color: #000000;
+	text-transform: uppercase;
+}
+
+.breadcrumbs__link {
+	color: #000000;
+	list-style: ;
 }
 
 .main-page__title {
@@ -447,6 +492,7 @@ a {
 	font-size: 18px;
 	text-align: center;
 	line-height: 20px;
+	color: #000000;
 }
 
 .catalog span {
@@ -468,38 +514,59 @@ a {
 	/* нарисовать кнопку*/
 }
 
-
 .catalog__buy {
 	font-size: 14px;
-	color: #FFFFFF;
 	text-align: center;
-	line-height: 18px;
+	color: #ffffff;
 
 	background: #63A63E;
 	box-shadow: inset 0 -3px 0 0 #367315;
 	border-radius: 2px;
 }
 
+.catalog__buy:hover,
+.catalog__byu:focus {
+	background-color: #5fbb2d;
+}
+
+.catalog__byu:active { /*не работает*/
+	background-color: #518534;
+	box-shadow: none;
+}
 
 .catalog__marks {
 	font-size: 14px;
 	color: #32425C;
 	text-align: center;
-	line-height: 18px;
- 	width: 135px;
-	height: 38px;
   	border: solid 3px #63a63e;
 }
 
-.underline {
+.catalog__marks:hover,
+.catalog__marks:focus {
+	border: solid 3px #32425c;
+}
+
+.catalog__marks:active {
+	color: rgba(50, 66, 92, 0.3);
+	border: solid 3px #32425c;
+	opacity: 0.3;
+}
+
+.header-main__info-link {
 	text-decoration: underline;
 	font-size: 16px;
 	color: #32425C;
 	line-height: 18px;
 }
 
-.footer__social-list {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+.header-main__info-link:hover,
+.header-main__info-link:focus {
+	color: #ee3643;
 }
+
+.header-main__info-link:active { /*скрыть один элемент*/
+	color: rgba(50, 66, 92, 0.3);
+}
+
+
+
