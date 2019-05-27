@@ -248,15 +248,14 @@ a {
 	line-height: 17px;
 }
 
-.main-nav__item:hover,
-.main-nav__item:focus {
+.main-nav__link:hover,
+.main-nav__link:focus {
 	background-color: #293449;
 }
 
-.main-nav__item:active { /*остается полоска при клике (из-за прозрачности, но без нее не работате цвет шрифта)*/
+.main-nav__link:active { /*остается полоска при клике (из-за прозрачности, но без нее не работате цвет шрифта)*/
 	background-color: #1d2739;
 	color: rgba(255, 255, 255, 0.5);
-	opacity: 0.5;
 }
 
 .output {
