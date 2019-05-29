@@ -96,6 +96,7 @@ a {
 
 .header__top {
 	background-color: #293449;
+	height: 42px;
 }
 
 .logo {
@@ -110,6 +111,7 @@ a {
 .header__logo {
 	width: 220px;
 	height: 47px;
+	margin-right: 17px;
 }
 
 .logo:hover,
@@ -234,19 +236,26 @@ a {
 .main-nav {
 	background: #32425C;
     box-shadow: inset 0 -5px 0 0 #293449;
-
     font-family: "Cuprum", "Arial", sans-serif;
+    height: 60px;
 }
 
 .main-nav__list {
 	list-style: none;
+
+
+	display: flex;
+    justify-content: space-around;
+    align-items: bottom;
 }
 
 .main-nav__link {
 	color: #FFFFFF;
 	font-size: 17px;
 	line-height: 17px;
+	padding: 22px 30px 26px;
 }
+
 
 .main-nav__link:hover,
 .main-nav__link:focus {
@@ -567,5 +576,23 @@ a {
 	color: rgba(50, 66, 92, 0.3);
 }
 
+.container {
+	width: 940px;
+	padding: 0;
+	margin: 0 auto;
+}
+
+.header__top-container {
+	display: flex;
+	flex-grow: 0;
+	align-items: center;
+}
+
+
+/*временные стили*/
+ body > * {background-color: rgba(255, 0, 0, 0.3);}
+ body > * > * {background-color: rgba(255, 255, 0, 0.3);}
+ body > * > * > * {background-color: rgba(0, 0, 255, 0.3);}
+ body > * > * > * > * {background-color: rgba(0, 255, 255, 0.3);}
 
 

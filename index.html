@@ -11,22 +11,20 @@
 <body>
   <header class="header">
     <div class="header__top">
+      <div class="container header__top-container">
         <a class="logo header__logo" href="index.html">
           <img src="img/logo.svg" alt="Логотип" width="109" height="19">
         </a>
-      <div class="header__search">
-        <div class="header__search-form">
-          <form  action="https://htmlacademy.ru" method="get" name="search">
-            <button class="header__search-button" type="submit" name="search-button"><img src="img/icon-search.svg" alt="Поиск"></button>
-            <input type="search" name="search" placeholder="Поиск:">
-          </form> 
-        </div>
+        <form  action="https://htmlacademy.ru" method="get" name="search">
+          <button class="header__search-button" type="submit" name="search-button"><img class="icon-search" src="img/icon-search.svg" alt="Поиск"></button>
+          <input type="search" name="search" placeholder="Поиск:">              
+        </form> 
         <a class="header__link" href="#">Закладки: 0</a>
         <a class="header__link" href="#">Корзина: 0</a>
         <a class="header__link header__link--chekout" href="#">Оформить заказ</a>
       </div>
     </div>
-    <div class="header-main">
+    <div class="header-main container">
       <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
       <a class="header-main__tel" href="tel:+78125550555">
         +7 (812) 555-05-55
@@ -37,7 +35,7 @@
       <a class="header-main__user-link header-main__user-link--pic" href="login.html">Войти</a>
       <a class="header-main__user-link" href="login.html">Регистрация</a>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav container">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="#">Главная</a>
@@ -65,7 +63,7 @@
   </header>
   <main>
     <!--Пока пусто-->
-    <div class="output">
+    <div class="output container">
       <section class="output__delivery">
         <h2 class="output__title">Компания «Техномарт»</h2>
         <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит
@@ -97,9 +95,9 @@
     </div>
   </main>
   <footer class="footer">
-      <a class="logo footer__logo" href="index.html">
-        <img src="img/logo.svg" alt="Логотип" height="23" width="138">
-      </a>
+    <a class="logo footer__logo" href="index.html">
+      <img src="img/logo.svg" alt="Логотип" height="23" width="138">
+    </a>
     <ul class="footer__nav">
       <li class="footer__item">
         <a class="footer__item" href="#">Компания</a>
@@ -117,7 +115,7 @@
         <a class="footer__item" href="#">Контакты</a>
       </li>
     </ul>
-    <p class="footer__text">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br>
+    <p class="footer__text">г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
     <a class="footer__tel" href="tel:+78125550555">+7 (812) 555-05-55</a></p>
     <ul class="special-nav">
       <li class="special-nav__item">
