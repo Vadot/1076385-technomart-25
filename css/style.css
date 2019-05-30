@@ -586,6 +586,8 @@ p.output__second-text {
 .output__image-link {
 	padding: 0;
 	margin: 0;
+
+	height: 158px;
 }
 
 .output__image {
@@ -621,6 +623,7 @@ p.output__second-text {
 	 width: 300px;
 	 display: flex;
 	 flex-direction: column;
+	 justify-content: space-between;
 }
 
 .output__agents {
@@ -646,7 +649,7 @@ p.output__second-text {
 
 .output__button-write {
 	width: 300px;
-	margin-top: auto;
+	margin-top: 40px;
 }
 
 /*/output*/
@@ -884,8 +887,27 @@ p.output__second-text {
 
 .breadcrumbs__link {
 	color: #000000;
-	margin-right: 41px;
+	margin-right: 39px;
 	line-height: 18px;
+}
+
+.breadcrumbs__list {
+	position: relative;
+}
+
+
+.breadcrumbs__list::before {
+	content: "";
+	position: absolute;
+	width: 8px;
+	height: 12px;
+	left: -25px;
+	top: 50%;
+	transform: translateY(-55%);
+
+	background-image: url("../img/icon-right-small.svg");
+	background-repeat: no-repeat;
+
 }
 
 .main-page__title {
@@ -929,7 +951,7 @@ p.output__second-text {
 
 .filter-wrapper {
 	display: flex;
-	margin-right: 21px;
+	margin-right: 20px;
 	min-width: 220px;
 }
 
@@ -1019,23 +1041,26 @@ p.output__second-text {
 	padding: 0;
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	flex-direction: row;
 	flex-wrap: wrap;
+
 }
 
 .catalog__item {
     border: 1px solid #E5E5E5;
-	width: 218px;
+	width: 220px;
 	margin: 0;
 	padding: 0;
-	margin-right: 22px;
+	margin-right: 20px;
 	margin-bottom: 21px;
 	min-height: 318px;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+
+	position: relative;
 }
 
 .catalog__item:nth-child(3n) {
@@ -1098,7 +1123,6 @@ p.output__second-text {
 	font-weight: 700;
 	font-size: 17px;
 	color: #ffffff;
-	background-color: red;
 	text-align: center;
 	line-height: 18px;
 
@@ -1106,8 +1130,9 @@ p.output__second-text {
 	margin: 0 auto;
 	margin-bottom: 21px;
 	margin-top: auto;
-
-
+/*	background-color: red;*/       /*фон перекроет картинку (но без него - риск что не видно будет, если не прогрузится)*/
+	background-image: url("../img/item-button.svg"); 
+	background-repeat: no-repeat;
 	width: 141px;
 	height: 38px;
 }
