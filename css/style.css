@@ -169,6 +169,37 @@ a {
 	text-align: center;
 	padding-top: 13px;
 	padding-bottom: 12px;
+	padding-left: 13px;
+}
+
+.header__link--marker::before {
+	position: absolute;
+
+	background-image: url("../img/icon-bookmark.svg");
+	background-repeat: no-repeat;
+	content: "";
+	position: absolute;
+	width: 14px;
+	height: 16px;
+	left: 17px;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.3;
+}
+
+.header__link--cort::before {
+	position: absolute;
+
+	background-image: url("../img/cart-icon.svg");
+	background-repeat: no-repeat;
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	left: 18px;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0.3;
 }
 
 .header__link-basket {
@@ -271,13 +302,28 @@ a {
 	line-height: 21px;
 	color: #EE3643;
 	display: inline-block;
+	position: relative;
 	width: 270px;
+	min-height: 45px;
 	padding-top: 10px;
 	padding-bottom: 8px;
 	text-align: center;
 	vertical-align: top;
 
 	margin-bottom: 10px; 
+}
+
+.header-main__tel::before {
+	content: "";
+	position: absolute;
+	width: 19px;
+	height: 19px;
+	left: 8px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	background-image: url("../img/icon-phone.svg");
+	background-repeat: no-repeat;
 }
 
 .header-main__address {
@@ -300,7 +346,7 @@ a {
 	display: inline-block;
 	vertical-align: top;
 	background-color: #ffffff;
-	padding: 20px;
+	padding: 15px;
 	padding-top: 12px;
 	margin: 0; 
 	width: 121px;
@@ -322,7 +368,6 @@ a {
 }
 
 .header-main__user-link--pic {
-	padding-right: 27px;
 	padding-left: 48px;
 
 	position: relative;
@@ -349,12 +394,30 @@ a {
 
 	padding: 0;
 	margin: 0;
-	padding-left: 17px;
-	padding-right: 32px;
+	margin-left: 17px;
+	margin-right: 26px;
+}
+
+.header-main__info-link--pic {
+	position: relative;
+}
+
+.header-main__info-link--pic::before { /*проблема: при наведении на точку - выделяется ссылка (можно привязать к верхнему блоку?)*/
+	content: "";
+	width: 4px;
+	height: 4px;
+	background-color: #32425c;
+	position: absolute;
+
+	border-radius: 50%;
+
+	left: -15px;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .header-main__info-link:nth-child(2) {
-	padding-left: 0;
+	margin-left: 0;
 }
 
 .header-main__info-link:hover,
@@ -380,6 +443,7 @@ a {
 	padding: 0;
 	display: flex;
 	justify-content: space-between;
+	outline: none;
 }
 
 .header__search-form--input {
@@ -388,12 +452,12 @@ a {
 	padding: 0;
 	margin: 0;
 	background-color: #293449;
+	outline: none;
 
 	color: #ffffff;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
     order: 2;
-    tabindex: ;
 }
 
 .header__search-button {
@@ -401,19 +465,20 @@ a {
 	border: 0;
 	margin: 0;
 	padding: 11px 16.5px 11px 16.5px;
-
+	outline: none;
+	cursor: pointer;
 }
 
 .header__search-button path {
 	opacity: 0.3;
 }
 
-.header__search-form--input:focus + .header__search-button path {
+.header__search-form--input:focus ~ .header__search-button path {
 	fill: #ee3643;
 	opacity: 1;
 }
 
-.header__search-form--input:focus + .header__search-button {
+.header__search-form--input:focus ~ .header__search-button {
 	background-color: #ffffff;
 }
 
@@ -454,8 +519,6 @@ a {
 	display: flex;
 	width: 100%;
 	min-width: 300px;
-
-	padding: 11px 10px 11px 47px;
 	background-color: #ffffff;
 
 	justify-content: space-between;
@@ -467,7 +530,11 @@ a {
 .header__icon-exit {
 	margin: 0;
 	padding: 0;
-	height: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 45px;
+	height: 45px;
 }
 
 .header__id {
@@ -477,8 +544,24 @@ a {
 	line-height: 21px;
 
 	margin: 0;
-	margin-right: 36px;
-	padding: 0;
+	display: block;
+	padding: 12px 10px;
+	padding-left: 47px;
+
+	position: relative;
+}
+
+.header__id::before {
+	content: "";
+	position: absolute;
+	width: 20px;
+	height: 18px;
+	left: 14px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	background-image: url("../img/icon-user.svg");
+	background-repeat: no-repeat;
 }
 
 .header-id:hover,
@@ -593,7 +676,6 @@ p.output__second-text {
 .output__image {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 40px;
 }
 
 .output__title {
@@ -623,7 +705,7 @@ p.output__second-text {
 	 width: 300px;
 	 display: flex;
 	 flex-direction: column;
-	 justify-content: space-between;
+	 min-height: 396px;
 }
 
 .output__agents {
@@ -635,12 +717,27 @@ p.output__second-text {
 	margin: 0;
 	padding: 0;
 	margin-top: 16px;
+	margin-bottom: 37px;
 }
 
 .output__agent {
 	margin-bottom: 24px;
+	position: relative;
+	margin-left: 36px;
 }
 
+.output__agent::before {
+	position: absolute;
+	
+	content: "";
+	border: 1px solid #ee3643;
+	position: absolute;
+	width: 25px;
+	height: 2px;
+	left: -36px;
+	top: 50%;
+	transform: translateY(-50%);
+}
 
 .output__button-detail {
 	width: 220px; 
@@ -649,7 +746,7 @@ p.output__second-text {
 
 .output__button-write {
 	width: 300px;
-	margin-top: 40px;
+	margin-top: auto;
 }
 
 /*/output*/
@@ -714,6 +811,8 @@ p.output__second-text {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-left: 10px;
+
 }
 
 .footer__feedback {
@@ -740,7 +839,8 @@ p.output__second-text {
 	padding: 0;
 	list-style: none;
 	display: flex;
-	width: 140px;
+	justify-content: center;
+	flex-wrap: wrap;
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -763,10 +863,6 @@ p.output__second-text {
 	margin-right: 3px;
 }
 
-.footer__social-btn--last {; 
-	margin-right: 0;
-}
-
 .footer__social-link:hover,
 .footer__social-link:focus {
 	background-color: #ee3643;
@@ -778,6 +874,7 @@ p.output__second-text {
 	align-items: center;
 	margin-top: 37px;
 	margin-bottom: 34px;
+	margin-right: 10px;
 }
 
 .footer-wrapper {
@@ -795,7 +892,7 @@ p.output__second-text {
 	display: flex;
 	justify-content: flex-end;
 	flex-wrap: wrap;
-	width: 413px;
+	width: 560px;
 }
 
 .special-nav,
@@ -858,8 +955,6 @@ p.output__second-text {
 
 }
 
-
-
 .write-us {
 	box-shadow: 0 20px 40px 0 rgba(0,0,0,0.75);
 	font-size: 18px;
@@ -870,8 +965,6 @@ p.output__second-text {
 .write-us__bottom {
 	background-color: #f4f4f4;
 }
-
-
 
 .breadcrumbs {
 	font-size: 13px;
@@ -907,7 +1000,6 @@ p.output__second-text {
 
 	background-image: url("../img/icon-right-small.svg");
 	background-repeat: no-repeat;
-
 }
 
 .main-page__title {
@@ -987,12 +1079,22 @@ p.output__second-text {
 	line-height: 19px;
 	padding: 0;
 	margin: 0; 
+	margin-left: 35px;
 
 	list-style: none;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
+
+.filter li {
+	margin-bottom: 6px;
+}
+
+.filter li:last-child {
+	margin-bottom: 0;
+}
+
 
 .filter button {
 	background: #FFFFFF;
@@ -1023,10 +1125,10 @@ p.output__second-text {
 }
 
 .filter label {
+	padding: 0;
 	font-size: 15px;
 	line-height: 20px;
 }
-
 
 
 /*catalog*/
