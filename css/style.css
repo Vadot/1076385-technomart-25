@@ -1109,6 +1109,8 @@ p.output__second-text {
 	margin-top: 70px;
 	min-width: 140px;
 	min-height: 38px;
+
+	cursor: pointer;
 }
 
 .filter__fieldset {
@@ -1225,18 +1227,32 @@ p.output__second-text {
 	font-weight: 700;
 	font-size: 17px;
 	color: #ffffff;
-	text-align: center;
 	line-height: 18px;
 
 	padding: 0;
+	padding-left: 10px;
 	margin: 0 auto;
+	margin-left: 43px;
 	margin-bottom: 21px;
 	margin-top: auto;
-/*	background-color: red;*/       /*фон перекроет картинку (но без него - риск что не видно будет, если не прогрузится)*/
-	background-image: url("../img/item-button.svg"); 
-	background-repeat: no-repeat;
-	width: 141px;
+	background-color: #ee3643;
+
+	width: 121px;
 	height: 38px;
+
+	position: relative;
+}
+
+.catalog__price::after { /*виден след от использования псевдокласса*/
+	content: "";
+	position: absolute;
+	right: -20px;
+	top: 0;
+	width: 0;
+	height: 0;
+	border-top: 19px solid transparent;
+	border-left: 20px solid #ee3643;
+	border-bottom: 19px solid transparent;
 }
 
 .catalog__buy {
