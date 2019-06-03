@@ -157,6 +157,10 @@ a {
 	margin-bottom: -5px;
 }
 
+.header__logo-img {
+	margin-top: -4px;
+}
+
 .header__link {
 	display: block;
 	width: 150px;
@@ -167,11 +171,14 @@ a {
 	line-height: 17px;
 	color: #ffffff;
 	text-align: center;
-	padding-top: 13px;
+	padding-top: 12px;
 	padding-bottom: 12px;
-	padding-left: 35px;
+	padding-left: 20px;
 	padding-right: 2px;
+}
 
+.header__link--marker {
+	padding-left: 19px;
 }
 
 .header__link--marker::before {
@@ -183,9 +190,8 @@ a {
 	position: absolute;
 	width: 14px;
 	height: 16px;
-	left: 23px;
-	top: 50%;
-	transform: translateY(-50%);
+	left: 17px;
+	top: 12px;
 	opacity: 0.3;
 }
 
@@ -199,8 +205,7 @@ a {
 	width: 15px;
 	height: 15px;
 	left: 18px;
-	top: 50%;
-	transform: translateY(-50%);
+	top: 12px;
 	opacity: 0.3;
 }
 
@@ -212,35 +217,39 @@ a {
     color: #ffffff;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
-    padding-left: 2px;
+    padding-left: 1px;
+
 }
 
 .header__search-form--input::-moz-placeholder {
     color: #ffffff;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
-	padding-left: 2px;
+	padding-left: 1px;
 }
 
 .header__search-form--input:-ms-input-placeholder {
     color: #ffffff;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
-    padding-left: 2px;
+    padding-left: 1px;
+
 }
 
 .header__search-form--input::-ms-input-placeholder {
     color: #ffffff;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
-    padding-left: 2px;
+    padding-left: 1px;
+
 }
 
 .header__search-form--input::placeholder {
     color: #ffffff;
     font-family: "Cuprum", "Arial", sans-serif;
     font-size: 17px;
-    padding-left: 2px;
+    padding-left: 1px;
+
 }
 
 .header__link--chekout {
@@ -291,6 +300,7 @@ a {
 
 	margin: 0;
 	margin-top: 8px;
+	margin-left: 53px;
 	padding: 0;
 
 	width: 196px;
@@ -299,6 +309,7 @@ a {
 .header-main__tel {
 	background: #F3F7F9;
 	border: 3px solid #FFFFFF;
+	font-family: "Cuprum", "Arial", sans-serif;
 
 	font-size: 21px;
 	line-height: 21px;
@@ -345,15 +356,16 @@ a {
 	font-size: 21px;
 	color: #000000;
 	line-height: 21px;
+	font-family: "Cuprum", "Arial", sans-serif;
 
 	display: inline-block;
 	vertical-align: top;
 	background-color: #ffffff;
 	padding: 15px;
-	padding-top: 12px;
+	padding-bottom: 10px;
+	padding-top: 14px;
 	margin: 0; 
 	width: 121px;
-	min-height: 45px;
 }
 
 .header-main__user-link:nth-child(2) {
@@ -445,7 +457,7 @@ a {
 	margin: 0;
 	padding: 0;
 	display: flex;
-	justify-content: space-between;
+	justify-content: flex-start;
 	outline: none;
 }
 
@@ -467,7 +479,7 @@ a {
 	background-color: transparent;
 	border: 0;
 	margin: 0;
-	padding: 11px 16.5px 11px 16.5px;
+	padding: 10px 13px 9px 17px;
 	outline: none;
 	cursor: pointer;
 }
@@ -1590,4 +1602,8 @@ p.output__second-text {
 .info-block {
 	margin-top: 200px;
 	margin-bottom: 100px;
+}
+
+.pixelperfect {
+	height: 1967px;
 }
