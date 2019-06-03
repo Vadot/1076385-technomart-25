@@ -172,17 +172,26 @@
       </div>
     </div>
   </footer>
-  <div class="write-us visually-hidden">
+  <div class="write-us">
     <form action="https://htmlacademy.ru" method="post" name="write-us" class="write-us__form">
-      <button type="button" aria-label="Exit"></button>
+      <button class="write-us__exit" type="button" aria-label="Exit"></button>
+      <div class="write-us__wrapper">
+      <div class="write-us__user">
       <label for="log-name">Ваше имя:</label>
-      <input type="text" name="name" id="log-name" placeholder="Имя Фамилия">
+      <input class="write-us__data-input" type="text" name="name" id="log-name" placeholder="Имя Фамилия">
+      </div>
+      <div class="write-us__user">
       <label for="e-mail">Ваш e-mail:</label>
-      <input type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
+      <input class="write-us__data-input" type="email" name="e-mail" id="e-mail" placeholder="email@example.com">
+      </div>
+      <div class="write-us__letter">
       <label for="textarea">Текст письма:</label>
-      <textarea name="letter" id="textarea" placeholder="В свободной форме">
-      </textarea>
-      <button type="submit">Отправить</button>
+      <textarea class="write-us__data-input" name="letter" id="textarea" placeholder="В свободной форме"></textarea>
+      </div>
+    </div>
+      <div class="write-us__bottom">
+      <button class="write-us__button button" type="submit">Отправить</button>
+    </div>
     </form>
   </div>
   <!--Сюда скрипты подключать-->

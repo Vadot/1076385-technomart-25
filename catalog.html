@@ -91,9 +91,9 @@
         <li>
           <a class="breadcrumbs__link" href="index.html"><img src="img/icon-home.svg" alt="Главная" height="12" width="14"></a>
         </li>
-        <li class="breadcrumbs__list"><a class="breadcrumbs__link" href="#">Каталог</a></li>
-        <li class="breadcrumbs__list"><a class="breadcrumbs__link" href="#">Инструменты</a></li>
-        <li class="breadcrumbs__list">Перфораторы</li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Инструменты</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link">Перфораторы</a></li> 
       </ul>
       <h2 class="main-page__title">Перфораторы</h2>
       <div class="main-page__wrapper">
@@ -108,24 +108,24 @@
                 <legend class="filter__legend">Производители:</legend>
                 <ul>
                   <li>
-                    <input class="visually-hidden" id="bosch" type="checkbox" name="Bosch" checked>
-                    <label for="bosch">Bosch</label>
+                    <input class="filter__input visually-hidden" id="bosch" type="checkbox" name="Bosch" checked>
+                    <label class="filter__label checkbox" for="bosch">Bosch</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" id="inter" type="checkbox" name="Interscol">
-                    <label for="inter">Интерскол</label>
+                    <input class="filter__input visually-hidden" id="inter" type="checkbox" name="Interscol">
+                    <label class="filter__label checkbox" for="inter">Интерскол</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" id="makita" type="checkbox" name="Makita" checked>
-                    <label for="makita">Makita</label>
+                    <input class="filter__input visually-hidden" id="makita" type="checkbox" name="Makita" checked>
+                    <label class="filter__label checkbox" for="makita">Makita</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" id="dewalt" type="checkbox" name="Dewalt">
-                    <label for="dewalt">Dewalt</label>
+                    <input class="filter__input visually-hidden" id="dewalt" type="checkbox" name="Dewalt">
+                    <label class="filter__label checkbox" for="dewalt">Dewalt</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" id="hitachi" type="checkbox" name="Hitachi">
-                    <label for="hitachi">Hitachi</label>
+                    <input class="filter__input visually-hidden" id="hitachi" type="checkbox" name="Hitachi">
+                    <label class="filter__label checkbox" for="hitachi">Hitachi</label>
                   </li>
                 </ul>
               </fieldset>
@@ -133,12 +133,12 @@
                 <legend class="filter__legend">Питание:</legend>
                 <ul>
                   <li>
-                    <input class="visually-hidden" id="battery" type="radio" name="battery" checked>
-                    <label for="battery">Аккумуляторные</label>
+                    <input class="filter__input visually-hidden" id="battery" type="radio" name="battery" checked>
+                    <label class="filter__label radio" for="battery">Аккумуляторные</label>
                   </li>
                   <li>
-                    <input class="visually-hidden" id="network" type="radio" name="battery">
-                    <label for="network">Сетевые</label>
+                    <input class="filter__input visually-hidden" id="network" type="radio" name="battery">
+                    <label class="filter__label radio" for="network">Сетевые</label>
                   </li>
                 </ul>
               </fieldset>
@@ -364,11 +364,13 @@
       </div>
     </div>
   </footer>
-  <div class="info-basket visually-hidden">
-    <button type="button"></button>
-    <p>Товар добавлен в корзину!</p>
-    <a href="#">Оформить заказ</a>
-    <a href="#">Продолжить покупки</a>
+  <div class="info-block">
+    <button class="write-us__exit" type="button" aria-label="Exit"></button>
+    <p class="info-block__text">Товар добавлен в корзину!</p>
+    <div class="info-block__bottom">
+      <a class="info-block__button" href="#">Оформить заказ</a>
+      <a class="info-block__button info-block__button--continue" href="#">Продолжить покупки</a>
+    </div>
   </div>
   <!--Сюда скрипты подключать-->
 </body>
