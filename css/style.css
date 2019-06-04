@@ -590,6 +590,15 @@ a {
 	fill: #c5c5c5;
 }
 
+.header__icon-exit:hover g,
+.header__icon-exit:focus g {
+	fill: #32425c;
+}
+
+.header__icon-exit:active g {
+	fill: #c5c5c5;
+}
+
 .header__id {
 	font-family: "Cuprum", "Arial", sans-serif;
 	font-size: 21px;
@@ -612,20 +621,24 @@ a {
 	left: 14px;
 	top: 49%;
 	transform: translateY(-50%);
+	opacity: 0.3;
 
 	background-image: url("../img/icon-user.svg");
 	background-repeat: no-repeat;
 }
 
-.header-id:hover,
-.header-id:focus {
-	color: #EE3643;
+.header__id:hover::before ,
+.header__id:focus::before {
+	opacity: 1;
 }
 
-.header-id:active {
+.header__id:active::before {
 	opacity: 0.3;
 }
 
+.header__id:active {
+	color: rgba(0, 0, 0, 0.3);
+}
 
 .header-main {
 	display: flex;
@@ -1272,6 +1285,7 @@ p.output__second-text {
     line-height: 20px;
     position: relative;
     padding-top: 1px;
+    cursor: pointer;
 }
 
 .filter li {
@@ -1685,10 +1699,28 @@ p.output__second-text {
 	text-transform: uppercase;
 }
 
+.info-block__button:hover,
+.info-block__button:focus {
+	background-color: #ca2c37;
+}
+
+.info-block__button:active {
+	background-color: #ba2732;
+}
+
 .info-block__button--continue {
 	background-color: #ffffff;
 	color: #000000;
 	margin-right: 0px;
+}
+
+.info-block__button--continue:hover,
+.info-block__button--continue:focus {
+	background-color: #c5c5c5;
+}
+
+.info-block__button--continue:active {
+	background-color: gray;
 }
 
 .modal__bottom {
