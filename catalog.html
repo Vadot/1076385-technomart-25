@@ -14,7 +14,7 @@
       <div class="container">
         <div class="header__top-container">
           <a class="logo header__logo" href="index.html">
-            <img src="img/logo.svg" alt="Логотип" width="109" height="19">
+            <img class="header__logo-img" src="img/logo.svg" alt="Логотип" width="111" height="19">
           </a>
           <form class="header__search-form" action="index.html" method="get" name="search">
             <input class="header__search-form--input" type="search" name="search" placeholder="Поиск:">
@@ -24,21 +24,21 @@
               </svg>
             </button>
           </form>
-          <a class="header__link header__link--marker" href="#">Закладки: 0</a>
-          <a class="header__link header__link--cort header__link-basket" href="#">Корзина: 10</a>
+          <a class="header__link header__link-marker" href="#">Закладки: 0</a>
+          <a class="header__link header__link-cort header__link-cort--full" href="#">Корзина: 10</a>
           <a class="header__link header__link--chekout" href="#">Оформить заказ</a>
         </div>
       </div>
     </div>
     <div class="container">
-      <div class="header-main">
-        <h1 class="header__title">Интернет-магазин строительных материалов и инструментов для ремонта</h1>
+      <div class="header-main header-main--catalog">
+        <h1 class="header__title">Интернет-магазин строительных материалов и&nbsp;инструментов для ремонта</h1>
         <div class="header-main__contacts">
-          <a class="header-main__tel" href="tel:+78125550555">
+          <a class="header-main__tel header-main__tel--catalog" href="tel:+78125550555">
             +7 (812) 555-05-55
           </a>
-          <p class="header-main__address">
-            г.Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+          <p class="header-main__address header-main__address--catalog">
+            г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
           </p>
         </div>
         <div class="header__id-wrapper">
@@ -47,39 +47,46 @@
               Равшан Джамшутович
             </a>
             <a class="header__icon-exit" href="#">
-              <img src="img/icon-login.svg" alt="exit" aria-label="Выйти">
+<svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
+    <g fill="#32425C">
+        <path d="M21 8.5L12.125 0v6h-6v5h6v6z"/>
+        <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z"/>
+    </g>
+</svg>
             </a>
           </div>
           <div class="header__my-link">
             <a class="header-main__info-link" href="#">
               Мои заказы</a>
-            <a class="header-main__info-link header-main__info-link--pic" href="#">
+          <div class="header-main__info-link--pic">
+            <a class="header-main__info-link" href="#">
               Личный кабинет</a>
+          </div>
           </div>
         </div>
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">Главная</a>
+            <a class="main-nav__link main-nav__link--1" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Компания</a>
+            <a class="main-nav__link main-nav__link--2" href="#">Компания</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">Каталог</a>
+            <a class="main-nav__link main-nav__link--3" href="catalog.html">Каталог</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Новости</a>
+            <a class="main-nav__link main-nav__link--4" href="#">Новости</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Спецпредложения</a>
+            <a class="main-nav__link main-nav__link--5" href="#">Спецпредложения</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Доставка</a>
+            <a class="main-nav__link main-nav__link--6" href="#">Доставка</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link" href="#">Контакты</a>
+            <a class="main-nav__link main-nav__link--7" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -88,12 +95,12 @@
   <main class="main-page">
     <div class="container">
       <ul class="breadcrumbs">
-        <li>
+        <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="index.html"><img src="img/icon-home.svg" alt="Главная" height="12" width="14"></a>
         </li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Инструменты</a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link">Перфораторы</a></li> 
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Инструмент</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--perf">Перфораторы</a></li> 
       </ul>
       <h2 class="main-page__title">Перфораторы</h2>
       <div class="main-page__wrapper">
@@ -101,8 +108,9 @@
           <section class="filter">
             <p class="filter__title">Фильтр:</p>
             <form action="https://htmlacademy.ru" method="get">
-              <fieldset class="filter__fieldset">
+              <fieldset class="filter__fieldset filter__fieldset--price">
                 <legend class="filter__legend">Цена:</legend>
+                <div class="price">...</div>
               </fieldset>
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Производители:</legend>
@@ -147,7 +155,7 @@
           </section>
         </div>
         <div class="catalog-sort-wrapper">
-          <div class="sort">Сортировка!</div>
+          <div class="sort">Сортировка:</div>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="catalog__list">
@@ -183,7 +191,7 @@
                 <span>30500 P.</span>
                 <a href="#" class="catalog__price">25500 P.</a>
               </li>
-              <li class="catalog__item">
+              <li class="catalog__item new">
                 <div class="catalog__mouse">
                   <a href="#" class="catalog__buy">
                     Купить
@@ -214,7 +222,7 @@
                 <span>22500 P.</span>
                 <a href="#" class="catalog__price">15500 P.</a>
               </li>
-              <li class="catalog__item">
+              <li class="catalog__item new">
                 <div class="catalog__mouse">
                   <a href="#" class="catalog__buy">
                     Купить
@@ -245,7 +253,7 @@
                 </a>
                 <a href="#" class="catalog__price">12500 P.</a>
               </li>
-              <li class="catalog__item">
+              <li class="catalog__item new">
                 <div class="catalog__mouse">
                   <a href="#" class="catalog__buy">
                     Купить
@@ -298,13 +306,14 @@
       </div>
     </div>
   </main>
+  <div class="numbers">...</div>
   <!--Низ страницы-->
   <footer class="footer">
     <div class="container">
       <div class="footer-wrapper">
         <div class=footer__left-wrapper>
           <a class="logo footer__logo" href="index.html">
-            <img src="img/logo.svg" alt="Логотип" height="23" width="138">
+            <img class="footer__logo-img" src="img/logo.svg" alt="Логотип" height="23" width="138">
           </a>
           <p class="footer__text">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
           <a class="footer__tel" href="tel:+78125550555">+7 (812) 555-05-55</a>
@@ -332,10 +341,10 @@
               <a class="special-nav__link" href="#">Материалы</a>
             </li>
             <li class="special-nav__item">
-              <a class="special-nav__link" href="#">Техника</a>
+              <a class="special-nav__link special-nav__link--2" href="#">Техника</a>
             </li>
             <li class="special-nav__item">
-              <a class="special-nav__link" href="#">Инструменты</a>
+              <a class="special-nav__link special-nav__link--3" href="#">Инструмент</a>
             </li>
             <li class="special-nav__item">
               <a class="special-nav__link special-nav__link--last" href="#">Спецпредложения</a>
@@ -347,27 +356,27 @@
     <div class="footer__bottom">
       <div class="container">
         <div class="footer__bottom-wrapper">
-          <p class="footer__rights">&copy;2010-2019 Компания «Техномарт»
+          <p class="footer__rights">&copy; 2010&ndash;2019 Компания «Техномарт»
             Все права защищены</p>
           <ul class="footer__social-network">
-            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img src="img/icon-vk.svg" alt="Вконтакте"></a></li>
-            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img src="img/icon-fb.svg" alt="Фейсбук"></a></li>
-            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img src="img/icon-insta.svg" alt="Инстаграм"></a></li>
+            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img class="footer__social-img" src="img/icon-vk.svg" alt="Вконтакте"></a></li>
+            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img class="footer__social-img" src="img/icon-fb.svg" alt="Фейсбук"></a></li>
+            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img class="footer__social-img" src="img/icon-insta.svg" alt="Инстаграм"></a></li>
           </ul>
           <div class="footer__author-wrapper">
             <p class="footer__feedback">Обратная связь:
               <a class="footer__author" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a></p>
-            <p class="footer__made-by">Разработано:
+            <p class="footer__made-by">Разработано &ndash;
               <a class="footer__author" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a></p>
           </div>
         </div>
       </div>
     </div>
   </footer>
-  <div class="info-block">
-    <button class="write-us__exit" type="button" aria-label="Exit"></button>
+  <div class="info-block modal">
+    <button class="modal__exit" type="button" aria-label="Exit"></button>
     <p class="info-block__text">Товар добавлен в корзину!</p>
-    <div class="info-block__bottom">
+    <div class="modal__bottom">
       <a class="info-block__button" href="#">Оформить заказ</a>
       <a class="info-block__button info-block__button--continue" href="#">Продолжить покупки</a>
     </div>
