@@ -1162,14 +1162,111 @@ p.output__second-text {
 	background-color: #f7f3ec;
 	font-size: 13px;
 	line-height: 18px;
-	color: #000000;
 	width: 100%;
-	height: 38px;
+	min-height: 38px;
 	margin: 0;
-	padding: 10px 3px 3px 19px;
+	padding: 10px 15px 3px 19px;
 
 	text-transform: uppercase;
 	margin-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.sort__title {
+	padding: 0;
+    margin: 0;
+    color: #000000;
+    padding-right: 10px;
+    padding-bottom: 7px;
+}
+
+.sort__right {
+	width: 446px;
+}
+
+.sort__button {
+	padding: 0;
+    margin: 0;
+	border: none;
+	color: rgba(0, 0, 0, 0.3);
+	background-color: transparent;
+
+	cursor: pointer;
+	text-transform: uppercase;
+	margin-right: 67px;
+    margin-bottom: 8px;
+
+    border-bottom: 1px dotted rgba(238, 54, 67, 1);
+}
+
+.sort__button--selected {
+	opacity: 1;
+	color: #ee3643;
+	border: none;
+}
+
+.sort__button:nth-child(2) {
+	margin-right: 62px;
+}
+
+.sort__button:nth-child(3) {
+	margin-right: 30px;
+}
+
+.sort__button:hover,
+.sort__button:focus {
+	border-bottom: 1px solid rgba(238, 54, 67, 1);
+	color: #000000;
+}
+
+.sort__switch {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+    cursor: pointer;
+}
+
+.sort__switch--top {
+	width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid #c5c5c5;
+    position: relative;
+    bottom: 9px;
+    right: -13px;
+}
+
+.sort__switch--bottom {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 10px solid #c5c5c5;
+    position: relative;
+    bottom: -1px;
+    left: 29px;
+}
+
+.sort__switch--top.sort__switch--active {
+	border-bottom: 10px solid #ee3643;
+}
+
+.sort__switch--bottom.sort__switch--active {
+	border-top: 10px solid #ee3643;
+}
+
+.sort__switch--top:hover,
+.sort__switch--top:focus {
+	border-bottom: 10px solid #000000;
+}
+
+.sort__switch--bottom:hover,
+.sort__switch--bottom:focus {
+	border-top: 10px solid #000000;
 }
 
 .filter-wrapper {
@@ -1280,7 +1377,7 @@ p.output__second-text {
 	line-height: 18px;
 	color: #000000;
 	width: 220px;
-	height: 38px;
+	min-height: 38px;
 	margin: 0;
 	padding: 10px 2px 2px 19px;
 
@@ -1899,44 +1996,31 @@ p.output__second-text {
     border-radius: 2px;
     color: #ffffff;
 
-    opacity: 0.1;
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 .promo__link:hover,
 .promo__link:focus {
-	opacity: 0.2;
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 .promo__link:active {
-	opacity: 0.3;
+	background-color: rgba(0, 0, 0, 0.3);
 }
 
-/*
-.promo__link--1 {
-	background-color: #ddb053;
-}
-
-.promo__link--2 {
-	background-color: #58a8c9;
-}
-}*/
 .promo__link--3 {
 	padding-left: 10px;
 	margin-left: 23px;
-/*	background-color: #bd86c0;*/
 }
 
 .promo__link--4 {
 	padding-left: 9px;
 	margin-left: 23px;
-/*	background-color: #90c187;*/
 }
 
 .promo__link--5 {
 	padding-left: 9px;
 	margin-left: 23px;
-/*	background-color: #ddb053;*/
 }
 
 .promo__img {
@@ -2241,6 +2325,7 @@ p.output__second-text {
     min-height: 261px;
     padding-top: 63px;
     padding-bottom: 60px;
+    margin-top: 28px;
 }
 
 
@@ -2448,14 +2533,67 @@ p.output__second-text {
 	background-color: transparent;
 }
 
+
+.numbers {
+    margin-left: 219px;
+    padding: 32px;
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    font-size: 0;
+    padding-left: 21px;
+}
+
+.numbers__link {
+	font-size: 13px;
+	color: black;
+	display: inline-block;
+	vertical-align: top;
+	padding-top: 6px;
+	height: 38px;
+	min-width: 38px;
+	text-align: center;
+	margin-right: 10px;
+	padding-right: 4px;
+	padding-left: 4px;
+
+	border: solid 1px #e5e5e5;
+	border-radius: 3px;
+}
+
+.numbers__next {
+	text-transform: uppercase;
+	padding-left: 10px;
+	padding-right: 10px;
+	min-width: 140px;
+}
+
+.numbers__link--active {
+	background-color: #ee3643;
+	border-color: #ee3643;
+	color: #ffffff;
+}
+
+.numbers__link:hover,
+.numbers__link:focus {
+	border-color: #bdc6ca;
+}
+
+.numbers__link:active {
+	border-color: #ee3643;
+}
+
+.numbers__link--active:hover,
+.numbers__link--active:focus,
+.numbers__link--active:active {
+	background-color: #ee3643;
+	border-color: #ee3643;
+	color: #ffffff;
+}
 /*временные стили*/
 
 .price {
 	height: 141px;
-}
-
-.numbers {
-	height: 130px;
 }
 
 

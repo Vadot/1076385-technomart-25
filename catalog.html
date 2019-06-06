@@ -155,7 +155,19 @@
           </section>
         </div>
         <div class="catalog-sort-wrapper">
-          <div class="sort">Сортировка:</div>
+          <div class="sort">
+            <p class="sort__title">Сортировка:</p>
+            <div class="sort__right">
+            <button class="sort__button sort__button--selected">По цене</button>
+            <button class="sort__button">По типу</button>
+            <button class="sort__button">По функционалу</button>
+
+            <button class="sort__switch sort__switch--top sort__switch--active"></button>
+
+            <button class="sort__switch sort__switch--bottom"></button>
+
+            </div>
+          </div>
           <section class="catalog">
             <h2 class="visually-hidden">Каталог товаров</h2>
             <ul class="catalog__list">
@@ -304,7 +316,12 @@
           </section>
         </div>
       </div>
-      <div class="numbers">...</div>
+      <div class="numbers"> 
+        <a class="numbers__link numbers__link--active" href="catalog.html">1</a>
+        <a class="numbers__link" href="catalog.html">2</a>
+        <a class="numbers__link" href="catalog.html">3</a>
+        <a class="numbers__link numbers__next" href="catalog.html">Следующая</a>
+      </div>
     </div>
     <section class="summary">
     <div class="container">
