@@ -2391,7 +2391,6 @@ p.output__second-text {
 	margin-bottom: 27px;
 }
 
-.services__slide--delivery,
 .services__slide--warranty,
 .services__slide--credit {
 	display: none;
@@ -2434,6 +2433,19 @@ p.output__second-text {
     display: inline-block;
     vertical-align: top;
     padding-top: 10px;
+}
+
+.big-map {
+	position: fixed;
+	left: 50%;
+	margin-left: -470px;
+	bottom: 150px;
+
+	display: none;
+}
+
+.big-map__exit {
+	background-color: transparent;
 }
 
 /*временные стили*/
