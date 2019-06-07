@@ -854,6 +854,7 @@ p.output__second-text {
     margin-top: auto;
     padding-left: 8px;
     padding-right: 3px;
+    padding-top: 11px;
 }
 
 /*/output*/
@@ -1222,6 +1223,13 @@ p.output__second-text {
 	color: #000000;
 }
 
+.sort__button--selected:hover,
+.sort__button--selected:focus {
+	opacity: 1;
+	color: #ee3643;
+	border: none;
+}
+
 .sort__switch {
 	background-color: transparent;
 	border: none;
@@ -1251,14 +1259,6 @@ p.output__second-text {
     left: 29px;
 }
 
-.sort__switch--top.sort__switch--active {
-	border-bottom: 10px solid #ee3643;
-}
-
-.sort__switch--bottom.sort__switch--active {
-	border-top: 10px solid #ee3643;
-}
-
 .sort__switch--top:hover,
 .sort__switch--top:focus {
 	border-bottom: 10px solid #000000;
@@ -1268,6 +1268,19 @@ p.output__second-text {
 .sort__switch--bottom:focus {
 	border-top: 10px solid #000000;
 }
+
+.sort__switch--bottom.sort__switch--active:hover,
+.sort__switch--bottom.sort__switch--active:focus,
+.sort__switch--bottom.sort__switch--active {
+	border-top: 10px solid #ee3643;
+}
+
+.sort__switch--top.sort__switch--active:hover,
+.sort__switch--top.sort__switch--active:focus,
+.sort__switch--top.sort__switch--active {
+	border-bottom: 10px solid #ee3643;
+}
+
 
 .filter-wrapper {
 	display: flex;
@@ -1280,7 +1293,7 @@ p.output__second-text {
     font-weight: 700;
     color: #000000;
     line-height: 30px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 
 .filter__label {
@@ -1291,6 +1304,8 @@ p.output__second-text {
     padding-top: 1px;
     cursor: pointer;
 }
+
+
 
 .filter li {
     margin-bottom: 20px;
@@ -1353,22 +1368,26 @@ p.output__second-text {
 
 .checkbox:hover::before,
 .checkbox:focus::before {
-	
+	background-image: url("../img/checkbox-off-hover.svg");
 }
 
 .filter__input:checked + .checkbox:hover::before,
 .filter__input:checked + .checkbox:focus::before {
-
+	background-image: url("../img/checkbox-on-hover.svg");
 }
 
 .radio:hover::before,
 .radio:focus::before {
-
+	background-image: url("../img/radio-off-hover.svg");
 }
 
 .filter__input:checked + .radio:hover::before,
 .filter__input:checked + .radio:focus::before {
+	background-image: url("../img/radio-on-hover.svg");
+}
 
+.filter__input:disabled + .filter__label {
+	opacity: 0.4;
 }
 
 .filter__title {
@@ -1428,13 +1447,101 @@ p.output__second-text {
 }
 
 .filter__fieldset--price {
-	padding-bottom: 10px;
 	margin-bottom: 16px;
+	padding: 0;
 }
 
 .filter__fieldset--no-border {
 	padding-bottom: 0;
 	border-bottom: none;
+}
+
+.filter__range {
+	width: 220px;
+  	color: #000000;
+}
+
+.filter__controls {
+  	width: 220px;
+ 	height: 80px;
+
+	background-color: #f7f3ec;
+	position: relative;
+
+	margin-bottom: 9px;
+}
+
+.filter__scale {
+    width: 180px;
+    height: 2px;
+    background-color: #d7dcde;
+    position: absolute;
+    top: 39px;
+    left: 21px;
+}
+
+.filter__bar {
+   width: 85%;
+   height: 2px;
+
+   background-color: #5BC87D;
+   position: absolute;
+}
+
+.filter__price-controls {
+	position: relative;
+}
+
+.filter__price-control {
+	position: absolute;
+
+	background-image: url("../img/filter-button.svg");
+	background-repeat: no-repeat;
+	width: 20px;
+	height: 22px;
+
+	cursor: pointer;
+}
+
+.filter__price-control--min {
+    left: 20px;
+    top: -59px;
+}
+
+.filter__price-control--max {
+    left: 160px;
+    top: -59px;
+}
+
+.filter__price-wrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+	margin-bottom: 25px;
+}
+
+.filter__price-wrapper::before {
+    width: 10px;
+    height: 1px;
+    background-color: #444444;
+    position: absolute;
+    bottom: 18px;
+    left: 105px;
+    content: "";
+}
+
+.filter__price {
+    padding-right: 4px;
+    margin: 0;
+    border: none;
+    width: 95px;
+    height: 38px;
+    background-color: #f7f3ec;
+    font-size: 17px;
+    text-align: center;
+    padding-left: 7px;
 }
 
 
@@ -2525,7 +2632,7 @@ p.output__second-text {
 	left: 50%;
 	margin-left: -470px;
 	bottom: 150px;
-
+	box-shadow: 0px 20px 40px 0 rgba(41, 52, 73, 0.75);
 	display: none;
 }
 
@@ -2590,12 +2697,6 @@ p.output__second-text {
 	border-color: #ee3643;
 	color: #ffffff;
 }
-/*временные стили*/
-
-.price {
-	height: 141px;
-}
-
 
 
 

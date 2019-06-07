@@ -110,7 +110,26 @@
             <form action="https://htmlacademy.ru" method="get">
               <fieldset class="filter__fieldset filter__fieldset--price">
                 <legend class="filter__legend">Цена:</legend>
-                <div class="price">...</div>
+    <div class="filter__range">
+
+      <div class="filter__controls">
+        <div class="filter__scale">
+          <div class="filter__bar"></div>
+        </div>
+      </div>
+      <div class="filter__price-controls">
+        <div class="filter__price-control filter__price-control--min"></div>
+        <div class="filter__price-control filter__price-control--max"></div>
+      </div>
+      <div class="filter__price-wrapper">
+        <input class="filter__price" type="text" name="price-min" value="0" pattern="[0-9]{1,6}">
+        <input class="filter__price" type="text" name="price-max" value="30000" pattern="[0-9]{1,6}">
+      </div>
+    </div>
+
+
+
+
               </fieldset>
               <fieldset class="filter__fieldset">
                 <legend class="filter__legend">Производители:</legend>
@@ -158,13 +177,13 @@
           <div class="sort">
             <p class="sort__title">Сортировка:</p>
             <div class="sort__right">
-            <button class="sort__button sort__button--selected">По цене</button>
-            <button class="sort__button">По типу</button>
-            <button class="sort__button">По функционалу</button>
+            <a class="sort__button sort__button--selected" href="#">По цене</a>
+            <a class="sort__button" href="#">По типу</a>
+            <a class="sort__button" href="#">По функционалу</a>
 
-            <button class="sort__switch sort__switch--top sort__switch--active"></button>
+            <button class="sort__switch sort__switch--top sort__switch--active" type="button"></button>
 
-            <button class="sort__switch sort__switch--bottom"></button>
+            <button class="sort__switch sort__switch--bottom" type="button"></button>
 
             </div>
           </div>
