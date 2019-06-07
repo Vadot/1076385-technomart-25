@@ -17,7 +17,7 @@
             <img class="header__logo-img" src="img/logo.svg" alt="Логотип" width="111" height="19">
           </a>
           <form class="header__search-form" action="index.html" method="get" name="search">
-            <input class="header__search-form--input" type="search" name="search" placeholder="Поиск:">
+            <input class="header__search-input" type="search" name="search" placeholder="Поиск:">
             <button class="header__search-button" type="submit" name="search-button">
               <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
                 <path class="path" fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
@@ -90,14 +90,17 @@
             <a class="promo__link promo__link--3" href="#">Для стройки</a>
           </li>
           <li class="promo__img">
-            <div class="promo__slide1">
+          <input type="radio" name="promo-slide" class="promo__input visually-hidden" id="first-slide">
+          <input type="radio" name="promo-slide" class="promo__input promo__input--second visually-hidden" id="second-slide" checked>
+
+            <div class="promo__slide promo__slide--current">
               <img src="img/big-photo.jpg" width="620" height="266" alt="Мужчина с дрелью">
               <div class="promo__img-wrapper">
                 <h2 class="promo__img-title">Дрели</h2>
                 <p class="promo__img-subtitle">Соседям на радость!</p>
               </div>
             </div>
-            <div class="promo__slide2" style="display: none;">
+            <div class="promo__slide">
               <img src="img/big-photo2.jpg" width="620" height="266" alt="Мужчина с перфоратором">
               <div class="promo__img-wrapper">
                 <h2 class="promo__img-title">Перфораторы</h2>
@@ -105,14 +108,8 @@
               </div>
             </div>
             <a href="catalog.html" class="button promo__img-button">Открыть каталог</a>
-            <button class="promo__slide-button promo__slide-button--left" type="button"></button>
-            <button class="promo__slide-button promo__slide-button--right" type="button"></button>
-            <form class="promo__form" action="https://htmlacademy.ru" method="get">
-              <input type="radio" name="promo-slide" class="promo__input-1 visually-hidden" id="first-slide">
-              <label class="promo__label-1" for="first-slide"></label>
-              <input type="radio" name="promo-slide" class="promo__input-2 visually-hidden" id="second-slide" checked>
-              <label class="promo__label-2" for="second-slide"></label>
-            </form>
+              <label class="promo__label" for="first-slide"><button class="promo__slide-button promo__slide-button--left" type="button"></button></label>
+              <label class="promo__label promo__label--second" for="second-slide"><button class="promo__slide-button promo__slide-button--right" type="button"></button></label>
           </li>
           <li class="promo__item">
             <p class="promo__title">Скидки 50%</p>
@@ -129,7 +126,7 @@
           <h2 class="headliner__title">Популярные товары:</h2>
           <a class="headliner__button button" href="#">Все популярные товары</a>
         </div>
-        <ul class=headliner__catalog>
+        <ul class="headliner__catalog catalog">
           <li class="catalog__item">
             <div class="catalog__mouse">
               <a href="#" class="catalog__buy">
@@ -178,7 +175,7 @@
             <span class="catalog__old-price">30500 P.</span>
             <a href="#" class="catalog__price">25500 P.</a>
           </li>
-          <li class="catalog__item catalog__item--new catalog__item--4n">
+          <li class="catalog__item catalog__item--new">
             <div class="catalog__mouse">
               <a href="#" class="catalog__buy">
                 Купить
@@ -236,7 +233,7 @@
         </ul>
       </section>
     </div>
-    <div class="services">
+    <section class="services">
       <div class="container services__wrapper">
         <div class="services__header">
           <h2 class="services__title">Сервисы</h2>
@@ -248,18 +245,18 @@
         <ul class="services__buttons">
           <li>
             <input class="services__button visually-hidden" id="delivery" type="radio" name="service" checked>
-            <label class="services__label" for="delivery">Доставка</label>
+            <label class="services__label" for="delivery" tabindex="0">Доставка</label>
           </li>
           <li>
             <input class="services__button visually-hidden" id="warranty" type="radio" name="service">
-            <label class="services__label" for="warranty">Гарантия</label>
+            <label class="services__label" for="warranty" tabindex="0">Гарантия</label>
           </li>
           <li>
             <input class="services__button visually-hidden" id="credit" type="radio" name="service">
-            <label class="services__label" for="credit">Кредит</label>
+            <label class="services__label" for="credit" tabindex="0">Кредит</label>
           </li>
         </ul>
-        <div class="services__slide services__slide--delivery">
+        <div class="services__slide services__slide--delivery services__slide--block">
           <h3 class="services__headline">Доставка</h3>
           <p class="services__text">
             Мы с удовольствием доставим ваш товар прямо
@@ -285,7 +282,7 @@
           <a class="services__slide-button button" href="#">Отправить заявку</a>
         </div>
       </div>
-    </div>
+    </section>
     <div class="container">
       <div class="output">
         <section class="output__delivery">
@@ -407,11 +404,12 @@
     </form>
   </div>
   <div class="big-map">
-    <img src="img/big-map.jpg" alt="Большая Конюшенная, 19/8" width="940" height="460">
-    <button class="modal__exit big-map__exit" type="button" aria-label="Exit"></button>
+<iframe src="https://yandex.ru/map-widget/v1/-/CCG4n09u" width="940" height="446" frameborder="1" allowfullscreen="true"></iframe>
+    <p><img src="img/big-map.jpg" alt="Большая Конюшенная, 19/8" width="940" height="460"></p>
+    <button class="big-map__exit" type="button" aria-label="Exit"></button>
   </div>
   <script>
-  var link = document.querySelector(".output__button-write");
+ var link = document.querySelector(".output__button-write");
 
   var popup = document.querySelector(".write-us");
   var close = popup.querySelector(".modal__exit");
@@ -448,6 +446,55 @@
       if (popup.classList.contains("modal-show")) {
         popup.classList.remove("modal-show");
         popup.classList.remove("modal-error");
+      }
+    }
+  });
+
+  var delivery = document.querySelector("[for=delivery]");
+  var slide_delivery = document.querySelector(".services__slide--delivery");
+  var warranty = document.querySelector("[for=warranty]");
+  var slide_warranty = document.querySelector(".services__slide--warranty");
+  var credit = document.querySelector("[for=credit]");
+  var slide_credit = document.querySelector(".services__slide--credit");
+
+
+  delivery.addEventListener("click", function(evt) {
+    slide_delivery.classList.add("services__slide--block");
+    slide_warranty.classList.remove("services__slide--block");
+    slide_credit.classList.remove("services__slide--block");
+  });
+
+  warranty.addEventListener("click", function(evt) {
+    slide_delivery.classList.remove("services__slide--block");
+    slide_warranty.classList.add("services__slide--block");
+    slide_credit.classList.remove("services__slide--block");
+  });
+
+    credit.addEventListener("click", function(evt) {
+    slide_delivery.classList.remove("services__slide--block");
+    slide_warranty.classList.remove("services__slide--block");
+    slide_credit.classList.add("services__slide--block");
+  });
+
+  var mapLink = document.querySelector(".output__image");
+  var mapPopup = document.querySelector(".big-map");
+  var mapClose = mapPopup.querySelector(".big-map__exit");
+  
+  mapLink.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.add("modal-show");
+  });
+
+  mapClose.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    mapPopup.classList.remove("modal-show");
+  });
+
+  window.addEventListener("keydown", function (evt) {
+    evt.preventDefault();
+    if (evt.keyCode === 27) {
+      if (mapPopup.classList.contains("modal-show")) {
+        mapPopup.classList.remove("modal-show");
       }
     }
   });
