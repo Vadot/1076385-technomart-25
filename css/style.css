@@ -807,10 +807,10 @@ p.output__second-text {
 }
 
 .output__contacts {
-	 width: 300px;
-	 display: flex;
-	 flex-direction: column;
-	 min-height: 396px;
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+	min-height: 396px;
 }
 
 .output__agents {
@@ -1481,11 +1481,11 @@ p.output__second-text {
 }
 
 .filter__bar {
-   width: 85%;
-   height: 2px;
+	width: 85%;
+   	height: 2px;
 
-   background-color: #5BC87D;
-   position: absolute;
+   	background-color: #5BC87D;
+   	position: absolute;
 }
 
 .filter__price-controls {
@@ -1752,8 +1752,6 @@ p.output__second-text {
 	left: 50%;
 	margin-left: -310px;
 	background-color: #ffffff;
-
-	display: none;
 }
 
 .modal__exit {
@@ -1788,7 +1786,8 @@ p.output__second-text {
 }
 
 .info-block {
-	top: 411px;
+	top: 300px;
+	display: none;
 }
 
 .info-block__text {
@@ -1869,7 +1868,8 @@ p.output__second-text {
 }
 
 .write-us {
-	bottom: 200px;
+	top: 150px;
+	display: none;
 }
 
 .write-us input {
@@ -2696,6 +2696,68 @@ p.output__second-text {
 	background-color: #ee3643;
 	border-color: #ee3643;
 	color: #ffffff;
+}
+
+.modal-show {
+	display: block;
+	animation: bounce 0.6s;
+}
+
+.modal-show--catalog {
+	display: block;
+	animation: dilution 0.5s;
+}
+
+.modal-error {
+  animation: error 0.6s;
+}
+
+@keyframes bounce {
+	0% {
+    	transform: translateY(-2000px);
+  }
+
+  	70% {
+    	transform: translateY(30px);
+  }
+
+  	90% {
+    	transform: translateY(-10px);
+  }
+
+  	100% {
+    	transform: translateY(0);
+  }
+}
+
+@keyframes error {
+
+  	0%,
+  	100% {
+    	transform: translateX(0);
+  }
+
+  	10%,
+  	30%,
+  	50%,
+  	70%,
+  	90% {
+    	transform: translateX(-10px);
+    	box-shadow: 10px 20px 60px 0 #ee3643;
+  }
+
+  	20%,
+  	40%,
+  	60%,
+  	80% {
+    	transform: translateX(10px);
+    	box-shadow: 10px 20px 60px 0 #ee3643;
+  }
+}
+
+@keyframes dilution {
+	from { opacity: 0.1; }
+	to { opacity: 1; }
 }
 
 
