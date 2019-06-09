@@ -48,7 +48,7 @@
             </a>
             <a class="header__icon-exit" href="#">
               <svg xmlns="http://www.w3.org/2000/svg" width="21" height="17" viewBox="0 0 21 17">
-                <g fill="#32425c">
+                <g>
                   <path d="M21 8.5L12.125 0v6h-6v5h6v6z" />
                   <path d="M3.106 13.952V3.048c.018-.376.171-1.057 1.01-1.057h5.027V0H4.116C1.938 0 1.112 1.81 1.087 3.027v10.946C1.112 15.189 1.938 17 4.116 17h5.027v-1.99H4.116c-.839 0-.992-.683-1.01-1.058z" />
                 </g>
@@ -68,25 +68,25 @@
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--1" href="index.html" aria-label="На главную страницу">Главная</a>
+            <a class="main-nav__link" href="index.html">Главная</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--2" href="#" aria-label="На страницу о Компании">Компания</a>
+            <a class="main-nav__link" href="#">Компания</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--3" href="catalog.html" aria-label="На страницу каталога">Каталог</a>
+            <a class="main-nav__link" href="catalog.html">Каталог</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--4" href="#" aria-label="На страницу новостей">Новости</a>
+            <a class="main-nav__link" href="#">Новости</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--5" href="#" aria-label="На страницу со спецпредложениями">Спецпредложения</a>
+            <a class="main-nav__link" href="#">Спецпредложения</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--6" href="#" aria-label="На страницу доставки">Доставка</a>
+            <a class="main-nav__link" href="#">Доставка</a>
           </li>
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--7" href="#" aria-label="На страницу контактов">Контакты</a>
+            <a class="main-nav__link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -98,7 +98,7 @@
         <li class="breadcrumbs__item">
           <a class="breadcrumbs__link" href="index.html"><img src="img/icon-home.svg" alt="Главная" height="12" width="14" aria-label="На главную страницу"></a>
         </li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" aria-label="На страницу каталога">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Каталог</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">Инструмент</a></li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link breadcrumbs__link--perf">Перфораторы</a></li>
       </ul>
@@ -164,7 +164,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="filter__button" type="submit" aria-label="Показать результат">Показать</button>
+              <button class="filter__button" type="submit">Показать</button>
             </form>
           </section>
         </div>
@@ -172,9 +172,9 @@
           <div class="sort">
             <p class="sort__title">Сортировка:</p>
             <div class="sort__right">
-              <a class="sort__button sort__button--selected" href="#" aria-label="Сортировка по цене">По цене</a>
-              <a class="sort__button" href="#" aria-label="Сортировка по типу">По типу</a>
-              <a class="sort__button" href="#" aria-label="Сортировка по функционалу">По функционалу</a>
+              <a class="sort__button sort__button--selected" href="#">По цене</a>
+              <a class="sort__button" href="#">По типу</a>
+              <a class="sort__button" href="#">По функционалу</a>
               <button class="sort__switch sort__switch--top sort__switch--active" type="button" aria-label="Сортировка по возрастанию"></button>
               <button class="sort__switch sort__switch--bottom" type="button" aria-label="Сортировка по убыванию"></button>
             </div>
@@ -415,38 +415,7 @@
       <a class="info-block__button info-block__button--continue" href="#">Продолжить покупки</a>
     </div>
   </section>
-  <script>
-  var link = document.querySelector(".catalog__buy");
-  var modal = document.querySelector(".info-block");
-  var close = modal.querySelector(".modal__exit");
-  var exit = modal.querySelector(".info-block__button--continue");
-
-
-  link.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modal.classList.add("modal-show--catalog");
-  });
-
-  close.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modal.classList.remove("modal-show--catalog");
-  });
-
-  exit.addEventListener("click", function(evt) {
-    evt.preventDefault();
-    modal.classList.remove("modal-show--catalog");
-  });
-
-  window.addEventListener("keydown", function(evt) {
-    if (evt.keyCode === 27) {
-      evt.preventDefault();
-      if (modal.classList.contains("modal-show--catalog")) {
-        modal.classList.remove("modal-show--catalog");
-      }
-    }
-  });
-
-  </script>
+    <script type="text/javascript" src="js/script.js"></script>
 </body>
 
 </html>
