@@ -8,6 +8,7 @@
   var mail = popup.querySelector("[name=e-mail]");
   var text = popup.querySelector("[name=letter]");
 
+if (link) {
   link.addEventListener("click", function(evt) {
     evt.preventDefault();
     popup.classList.add("modal-show");
@@ -37,7 +38,7 @@
       }
     }
   });
-
+}
 
   var delivery = document.querySelector("[for=delivery]");
   var slide_delivery = document.querySelector(".services__slide--delivery");
@@ -47,28 +48,33 @@
   var slide_credit = document.querySelector(".services__slide--credit");
 
 
-  delivery.addEventListener("click", function(evt) {
+
+if (delivery && warranty && credit) {
+  delivery.addEventListener("click", function() {
     slide_delivery.classList.add("services__slide--block");
     slide_warranty.classList.remove("services__slide--block");
     slide_credit.classList.remove("services__slide--block");
   });
 
-  warranty.addEventListener("click", function(evt) {
+  warranty.addEventListener("click", function() {
     slide_delivery.classList.remove("services__slide--block");
     slide_warranty.classList.add("services__slide--block");
     slide_credit.classList.remove("services__slide--block");
   });
 
-  credit.addEventListener("click", function(evt) {
+  credit.addEventListener("click", function() {
     slide_delivery.classList.remove("services__slide--block");
     slide_warranty.classList.remove("services__slide--block");
     slide_credit.classList.add("services__slide--block");
   });
+}
 
   var mapLink = document.querySelector(".output__image");
   var mapPopup = document.querySelector(".big-map");
   var mapClose = mapPopup.querySelector(".big-map__exit");
 
+
+if (mapLink) {
   mapLink.addEventListener("click", function(evt) {
     evt.preventDefault();
     mapPopup.classList.add("map-show");
@@ -88,17 +94,18 @@
     }
   });
 
-
+}
 
 
 
 
   var link_c = document.querySelector(".catalog__buy");
   var modal_c = document.querySelector(".info-block");
-  var close_c = modal_c.querySelector(".modal__exit");
-  var exit_c = modal_c.querySelector(".info-block__button--continue");
+  var close_c = document.querySelector(".modal__exit");
+  var exit_c = document.querySelector(".info-block__button--continue");
 
 
+if (link_c && modal_c && close_c && exit_c) {
   link_c.addEventListener("click", function(evt) {
     evt.preventDefault();
     modal_c.classList.add("modal-show--catalog");
@@ -122,3 +129,5 @@
       }
     }
   });
+
+}
