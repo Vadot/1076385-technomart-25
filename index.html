@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="css/style.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
   <title>HTML Academy: Техномарт</title>
 </head>
 
@@ -17,12 +17,14 @@
             <img class="header__logo-img" src="img/logo.svg" alt="Логотип" width="111" height="19">
           </a>
           <form class="header__search-form" action="index.html" method="get" name="search">
-            <input class="header__search-input" type="search" name="search" placeholder="Поиск:">
-            <button aria-label="Поиск по сайту" class="header__search-button" type="submit" name="search-button">
-              <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
-                <path class="path" fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
-              </svg>
-            </button>
+            <input class="header__search-input" type="search" name="search" placeholder="Поиск:" id="find">
+            <label for="find" class="header__search-button-wrapper">
+              <button aria-label="Поиск по сайту" class="header__search-button" type="submit" name="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17">
+                  <path class="path" fill="#ffffff" d="M17 15.586l-3.542-3.542A7.465 7.465 0 0 0 15 7.5 7.5 7.5 0 1 0 7.5 15c1.71 0 3.282-.579 4.544-1.542L15.586 17 17 15.586zM2 7.5C2 4.467 4.467 2 7.5 2 10.532 2 13 4.467 13 7.5c0 3.032-2.468 5.5-5.5 5.5A5.506 5.506 0 0 1 2 7.5z" />
+                </svg>
+              </button>
+            </label>
           </form>
           <a class="header__link header__link-marker" href="#">Закладки: 0</a>
           <a class="header__link header__link-cort" href="#">Корзина: 0</a>
@@ -137,7 +139,7 @@
             </div>
             <img class="catalog__img" src="img/item-image-10.jpg" alt="Перфоратор BOSCH  BFG 3000" width="218" height="170">
             <a href="#">
-              <h3 class="catalog__item-title">Перфоратор BOSCH  BFG 9000</h3>
+              <h3 class="catalog__item-title">Перфоратор BOSCH BFG 9000</h3>
             </a>
             <span class="catalog__old-price">32500 P.</span>
             <a href="#" class="catalog__price">25500 P.</a>
@@ -153,7 +155,7 @@
             </div>
             <img class="catalog__img" src="img/item-1.jpg" alt="Перфоратор BOSCH  BFG 3000" width="218" height="170">
             <a href="#">
-              <h3 class="catalog__item-title">Перфоратор BOSCH  BFG 3000</h3>
+              <h3 class="catalog__item-title">Перфоратор BOSCH BFG 3000</h3>
             </a>
             <span class="catalog__old-price">22500 P.</span>
             <a href="#" class="catalog__price">15500 P.</a>
@@ -169,7 +171,7 @@
             </div>
             <img class="catalog__img" src="img/item-image-12.jpg" alt="Перфоратор BOSCH  BFG 3000" width="218" height="170">
             <a href="#">
-              <h3 class="catalog__item-title">Перфоратор BOSCH  BFG 6000</h3>
+              <h3 class="catalog__item-title">Перфоратор BOSCH BFG 6000</h3>
             </a>
             <span class="catalog__old-price">30500 P.</span>
             <a href="#" class="catalog__price">25500 P.</a>
@@ -185,7 +187,7 @@
             </div>
             <img class="catalog__img" src="img/item-1.jpg" alt="Перфоратор BOSCH  BFG 3000" width="218" height="170">
             <a href="#">
-              <h3 class="catalog__item-title">Перфоратор BOSCH  BFG 2000</h3>
+              <h3 class="catalog__item-title">Перфоратор BOSCH BFG 2000</h3>
             </a>
             <a href="#" class="catalog__price">12500 P.</a>
           </li>
@@ -196,19 +198,24 @@
         </div>
         <ul class="headliner__companies">
           <li>
-            <a class="headliner__company" href=""><img src="img/bosch.jpg" alt="логотип Bosch" width="126" height="37">
+            <a class="headliner__company" href="">
+              <img src="img/bosch.jpg" alt="логотип Bosch" width="126" height="37">
             </a>
           </li>
           <li>
-            <a class="headliner__company" href=""><img src="img/makita.jpg" alt="логотип Makita" width="123" height="40"></a>
+            <a class="headliner__company" href="">
+              <img src="img/makita.jpg" alt="логотип Makita" width="123" height="40">
+            </a>
           </li>
           <li>
             <a class="headliner__company" href="">
-              <img src="img/dewalt.jpg" alt="логотип DeWalt" width="146" height="44"></a>
+              <img src="img/dewalt.jpg" alt="логотип DeWalt" width="146" height="44">
+            </a>
           </li>
           <li>
             <a class="headliner__company" href="">
-              <img src="img/interscol.jpg" alt="логотип Интерскол" width="200" height="88"></a>
+              <img src="img/interscol.jpg" alt="логотип Интерскол" width="200" height="88">
+            </a>
           </li>
           <li>
             <a class="headliner__company" href="">
@@ -227,7 +234,8 @@
           </li>
           <li>
             <a class="headliner__company" href="">
-              <img src="img/metabo.jpg" alt="логотип Metabo" width="204" height="69"></a>
+              <img src="img/metabo.jpg" alt="логотип Metabo" width="204" height="69">
+            </a>
           </li>
         </ul>
       </section>
@@ -366,9 +374,21 @@
           <p class="footer__rights">&copy; 2010&ndash;2019 Компания «Техномарт»
             Все права защищены</p>
           <ul class="footer__social-network">
-            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img class="footer__social-img" width="26" height="15" src="img/icon-vk.svg" alt="Вконтакте"></a></li>
-            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img class="footer__social-img" width="12" height="22" src="img/icon-fb.svg" alt="Фейсбук"></a></li>
-            <li class="footer__social-btn"><a class="footer__social-link" href="#"><img class="footer__social-img" width="21" height="21" src="img/icon-insta.svg" alt="Инстаграм"></a></li>
+            <li class="footer__social-btn">
+              <a class="footer__social-link" href="#" aria-label="Мы вконтакте">
+                <img class="footer__social-img" width="26" height="15" src="img/icon-vk.svg" alt="Вконтакте">
+              </a>
+            </li>
+            <li class="footer__social-btn">
+              <a class="footer__social-link" href="#" aria-label="Мы в фейсбуке">
+                <img class="footer__social-img" width="12" height="22" src="img/icon-fb.svg" alt="Фейсбук">
+              </a>
+            </li>
+            <li class="footer__social-btn">
+              <a class="footer__social-link" href="#" aria-label="Мы в инстаграме">
+                <img class="footer__social-img" width="21" height="21" src="img/icon-insta.svg" alt="Инстаграм">
+              </a>
+            </li>
           </ul>
           <div class="footer__author-wrapper">
             <p class="footer__feedback">Обратная связь:
